@@ -1,5 +1,6 @@
 import React from 'react'
-import {View,Text} from 'react-native'
+import {View,Text,Image,TouchableOpacity} from 'react-native'
+import {images} from '../../utils/const'
 import Styles from './Styles'
 
 class Inicio extends React.Component{
@@ -7,7 +8,24 @@ class Inicio extends React.Component{
     render(){
         return(
             <View>
-                <Text>Hello</Text>
+                <Image source={images.banner3x} style={Styles.banner}/>
+                <View style={Styles.timer}>
+                    <Text>Timer</Text>
+                </View>
+                <View style={Styles.menuBar}>
+                    <TouchableOpacity style={Styles.button} onPress={()=>null}>
+                        <Image sorce={images.icon}/>
+                        <Text>Noticias</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>null}>
+                        <Image sorce={images.icon}/>
+                        <Text>Mapa</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>null}>
+                        <Image sorce={images.icon}/>
+                        <Text>Programação</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         )
     }
