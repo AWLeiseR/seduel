@@ -3,7 +3,8 @@ import {View,
         Text,
         ActivityIndicator,
         FlatList,
-        Image} from 'react-native'
+        Image,
+        Dimensions} from 'react-native'
 import axios from 'axios'
 import Styles from './Styles'
 
@@ -24,13 +25,11 @@ class Noticias extends React.Component{
         axios
         .get('https://backendeducacao.herokuapp.com/posts')
         .then(response => {
-            console.log(response.data)
             this.setState({
                 news: response.data,
                 loading: false,
                 done: true
             })
-            console.log(this.state.news[0])
         })
         .catch(error => {
             console.log(error)
@@ -62,14 +61,21 @@ class Noticias extends React.Component{
     }
 
     render(){
+        const width = Dimensions.get('window').width
         if( !this.state.loading && this.state.done ){
             return(
+            <>                
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                    <Image source={ require('../../assets/images/detail.png')} style={{ width: width/3 , height: width/3}} />
+                    <Text style={{ marginLeft: width/5, fontSize: width/10 }} >Notícias</Text>
+                </View>
                 <View style={Styles.container}>
                     <FlatList styles = { Styles.wrapper } data={ this.state.news } renderItem={({ item }) => (
                         item.image ? this.drawCard(item) : this.drawCardNoPicture(item) 
                     )}
                     keyExtractor = {item => item._id} />
                 </View>
+            </>
             )
         } else if ( !this.state.loading && !this.state.done ) {
             return(

@@ -12,19 +12,25 @@ const Styles = StyleSheet.create({
     newsCard: {
         backgroundColor: 'white',
         borderRadius: 4,
-        marginBottom: 5,
-        marginTop: 10
+        paddingBottom: 10,
+        marginTop: 10,
+        borderBottomWidth: 0.5,
+        borderTopColor: '#000'
     },
     newsCardNoPicture: {
         backgroundColor: 'white',
         borderRadius: 4,
-        marginBottom: 5,
-        marginTop: 10
+        paddingBottom: 10,
+        marginTop: 10,
+        borderBottomWidth: 0.5,
+        borderTopColor: '#000'
     },
     newsCardImage: {
         height: 150,
         borderTopLeftRadius: 4,
-        borderTopRightRadius: 4
+        borderTopRightRadius: 4,
+        marginTop: 10,
+        borderBottomWidth: 0.5
     },
     newsCardContent: {
         padding: 5,
