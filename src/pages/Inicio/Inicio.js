@@ -1,5 +1,6 @@
 import React from 'react'
-import {View,Text} from 'react-native'
+import {View,Text,Image} from 'react-native'
+import {images} from '../../utils/const'
 import Styles from './Styles'
 
 class Inicio extends React.Component{
@@ -7,7 +8,7 @@ class Inicio extends React.Component{
     render(){
         return(
             <View>
-                <Text>Hello</Text>
+                <Image source={images.banner}/>
             </View>
         )
     }
