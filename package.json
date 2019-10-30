@@ -10,8 +10,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "luxon": "^1.21.0",
     "react": "16.9.0",
-    "react-native": "0.61.2"
+    "react-native": "0.61.2",
+    "react-native-geolocation-service": "^3.1.0",
+    "react-native-maps": "git+https://git@github.com/react-native-community/react-native-maps.git"
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
