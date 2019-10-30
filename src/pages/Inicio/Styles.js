@@ -8,22 +8,27 @@ const Styles=StyleSheet.create({
     banner:{
         width:valueWidth,
         height:valueHeight/3*1.212121,
+        marginBottom:valueHeight/20
     },
     timer:{
-        width:valueWidth,
-        height:valueHeight/5,
+        width:valueWidth/1.1,
+        height:valueHeight/7,
         borderStyle:'dashed',
         borderColor:colors.def_blue,
-        borderWidth:4,
-        borderRadius:10,
+        borderWidth:2,
+        borderRadius:0.3,
         justifyContent:'center',
-        alignItems:'center'
-
+        alignItems:'center',
+        alignSelf:'center',
+        marginBottom:valueHeight/20
     },
     menuBar:{
-        justifyContent:'space-between',
+        
+        justifyContent:'space-around',
+        flexDirection:'row'
     },
     button:{
+        alignItems:'center',
         width:valueWidth/4,
         height:valueHeight/10
     }
