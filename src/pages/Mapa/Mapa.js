@@ -5,15 +5,16 @@ import {View,
         Image,
         TextInput,
         FlatList,
-        Linking} from 'react-native'
+        Linking,
+        Animated} from 'react-native'
 
 import MapView, { PROVIDER_GOOGLE,
     Marker } from 'react-native-maps'
 
 import Geolocation from 'react-native-geolocation-service'
-import backhandler from '../../utils/backhandler'
-import Styles from './Styles'
-import DATA from './TEST'
+import mapBackhandler from '../../utils/backhandler'
+import Styles, { menuHeight, menuWidth, bottomMargin } from './Styles'
+import DATA from './localData'
 
 const menuStatus = {
     CLOSED: 1,
@@ -21,19 +22,11 @@ const menuStatus = {
     INFO:3 
 }
 
+
 let globalInfo = {nomeLocal:'', descricao:'', latlng:{latitute:0, longitude: 0}}
-let globalLocation = {}
+let userLocation = {}
 
-function MainMenuComponent({ changeView }){
-    return(
-        <TouchableOpacity activeOpacity={0.8} style={ Styles.menu } onPress={() => changeView(menuStatus.SEARCH)}>
-            <Text style={ Styles.txtButton }>Pesquisar local</Text>
-            <Text style={ Styles.txtButton }>></Text>
-        </TouchableOpacity>
-    )
-}
-
-function InfoMenu({ changeView, userLocation }){
+function InfoMenu({ userLocation }){
 
     const sendToGMaps = () => {
         const URL = 'https://www.google.com.br/maps/dir/' + userLocation.latitude + ',' + userLocation.longitude + '/' + globalInfo.latlng.latitude + ',' + globalInfo.latlng.longitude
@@ -44,19 +37,19 @@ function InfoMenu({ changeView, userLocation }){
         <View style={ Styles.menuWrapper }>
 
             <View style={ Styles.infoContainer }>
-                <Text style={{ fontFamily: 'Avenir Roman' }}>em destaque</Text>
+                <Text style={{ fontFamily: 'Avenir Roman', color:'gray' }}>em destaque</Text>
                 <Text style={ Styles.infoTitle }>{globalInfo.nomeLocal}</Text>
                 <Text numberOfLines={4} style={ Styles.infoSubtitle }>{globalInfo.descricao}</Text>
+
+                <TouchableOpacity activeOpacity={0.8} style={ Styles.routeBtn } onPress={() => sendToGMaps()}>
+                    <Text style={ Styles.routeText }>Obter rota</Text>
+                    <Image source={require('../../assets/icons/routeIcon/routeIcon.png')}
+                            resizeMode='contain'
+                            style={ Styles.routeIcon }/>
+                </TouchableOpacity>
             </View>
 
-            <TouchableOpacity activeOpacity={0.8} style={ Styles.routeBtn } onPress={() => sendToGMaps()}>
-                <Text style={ Styles.routeText }>Obter rota</Text>
-                <Image source={require('../../assets/icons/routeIcon/routeIcon.png')}
-                        resizeMode='contain'
-                        style={ Styles.routeIcon }/>
-            </TouchableOpacity>
-
-            <MainMenuComponent changeView={changeView} />        
+            
 
         </View>
     )
@@ -65,19 +58,17 @@ function InfoMenu({ changeView, userLocation }){
 
 function SearchItem({ id, title, changeState, item, changeRegion}){
 
-    console.log(changeRegion, "changef")
-
     const setGlobalInfo = () => {
         globalInfo = item
         changeRegion({
             region:{
                 latitude: item.latlng.latitude - 0.0025,
-                longitude:item.latlng.longitude,
+                longitude: item.latlng.longitude,
                 latitudeDelta: 0.0180, 
                 longitudeDelta: 0.0100 
             }
         })
-        changeState(menuStatus.INFO)
+        changeState(true)
     }
 
     return(
@@ -88,7 +79,7 @@ function SearchItem({ id, title, changeState, item, changeRegion}){
     )
 }
 
-function SearchMenu({ changeView, changeRegion}){
+function SearchMenu({ changeView, changeRegion }){
 
     const [textInput, changeText] = useState('')
 
@@ -119,11 +110,8 @@ function SearchMenu({ changeView, changeRegion}){
                 data={filteredData}
                 renderItem={({ item }) => <SearchItem id = {item.index} title={item.nomeLocal} item={item} changeState={changeView} changeRegion={changeRegion}/>}
                 keyExtractor={item => item.index.toString()}/>
-                
 
-                <TouchableOpacity activeOpacity={0.8} style={ Styles.backBtn } onPress={() => changeView(menuStatus.CLOSED)}>
-                    <Text style={ Styles.backText }>Voltar</Text>
-                </TouchableOpacity>
+                <View style={ { width: menuWidth/3.2, height: menuHeight/1.5 } }/>
 
                 
             </View>
@@ -133,25 +121,16 @@ function SearchMenu({ changeView, changeRegion}){
     
 }
 
-function ClosedMenu({ changeView }){
-    
-    return(
-        <View style={ Styles.menuWrapper }>
-            <MainMenuComponent changeView={changeView}/>
-        </View>
-    )
-
-}
-
-function Mapa(){
+function Mapa( props ){
 
     useEffect(() => {
 
         Geolocation.getCurrentPosition(
-            (position) => changeUserLocation({
+            (position) => 
+            userLocation = {
                 latitude : position.coords.latitude,
                 longitude : position.coords.longitude    
-            }),
+            },
             (error) => {
                 console.log(error)
             },
@@ -160,11 +139,7 @@ function Mapa(){
 
     })
 
-    backhandler(() => { changeMenu(menuStatus.CLOSED) })
-
     const [menuState, changeMenu] = useState(menuStatus.CLOSED)
-
-    const [userLocation, changeUserLocation] = useState({})
 
     const [mapRegion, changeMapRegion] = useState({
         region:{
@@ -175,33 +150,88 @@ function Mapa(){
         }
     })
 
+    mapBackhandler(() => { switchScreens(false) },
+                () => { props.navigation.navigate('Inicio')},
+                menuState)
+
+    // INICIO DA PERSONALIZACAO DA ANIMACAO //
+
+    const animVal = new Animated.Value(0)
+
+    const [ buttonDimension, changeBtnDimension ] = useState({
+        width: menuWidth, height: menuHeight, marginBottom: 0
+    })
+
+    const [ buttonDimensionEnd, changeBtnDimensionEnd ] = useState({
+        width: menuWidth, height: menuHeight, marginBottom: bottomMargin
+    })
+
+    const animatedWidth = animVal.interpolate({inputRange:[0,1],outputRange:[buttonDimension.width, buttonDimensionEnd.width]})
+    const animatedHeight = animVal.interpolate({inputRange:[0,1],outputRange:[buttonDimension.height, buttonDimensionEnd.height]})
+    const animatedMargin = animVal.interpolate({inputRange:[0,1],outputRange:[buttonDimension.marginBottom, buttonDimensionEnd.marginBottom]})
+
+    const animatedTransition = Animated.spring(animVal,{toValue:1})
+
+    const switchScreens = ( isInfo ) => {
+
+        if(isInfo){
+
+            changeBtnDimension({ width: menuWidth/3.2, height: menuHeight/1.5, marginBottom: bottomMargin })
+            changeBtnDimensionEnd({ width: menuWidth, height: menuHeight, marginBottom: 0})
+            changeMenu(menuStatus.INFO)
+            return
+
+        }
+
+        if(menuState == menuStatus.SEARCH){
+            changeBtnDimension({ width: menuWidth/3.2, height: menuHeight/1.5, marginBottom: bottomMargin })
+            changeBtnDimensionEnd({ width: menuWidth, height: menuHeight, marginBottom: 0})
+            changeMenu(menuStatus.CLOSED)
+        }else {
+            changeBtnDimension({ width: menuWidth, height: menuHeight, marginBottom: 0})
+            changeBtnDimensionEnd({ width: menuWidth/3.2, height: menuHeight/1.5, marginBottom: bottomMargin})
+            changeMenu(menuStatus.SEARCH)
+        }
+
+    }
+
+    const btnText = () => {
+
+        return (menuState == menuStatus.SEARCH)? 
+                <Text style={ [Styles.txtButton, {flex:1, textAlign:'center'}] }>Voltar</Text>:
+                <>
+                <Text style={ Styles.txtButton }>Pesquisar locais</Text>
+                <Text style={ Styles.txtButton }>></Text>
+                </>
+    }
+
+    // FIM DA PERSONALIZACAO DA ANIMACAO //
+
     const menu = () => {
 
         switch(menuState){
+
             case menuStatus.CLOSED:
-                return <ClosedMenu changeView={changeMenu}/>
+                animatedTransition.start()
+                return <></>
 
-            case menuStatus.SEARCH:
-                return <SearchMenu changeView={changeMenu} changeRegion={changeMapRegion}/>
-
+            case menuStatus.SEARCH:       
+                animatedTransition.start()
+                return <SearchMenu changeView={switchScreens} changeRegion={changeMapRegion}/>
+                
             case menuStatus.INFO:
-                return <InfoMenu changeView={changeMenu} userLocation={userLocation}/>
+                animatedTransition.start()
+                return <InfoMenu changeView={switchScreens} userLocation={userLocation}/>
         }
 
     }
 
     return(
         <View>
-            
+
             <MapView 
                     provider={PROVIDER_GOOGLE}
                     style = { Styles.map }
-                    initialRegion={{
-                        latitude: -23.324109,
-                        longitude: -51.201794,
-                        latitudeDelta: 0.0180, 
-                        longitudeDelta: 0.0100 
-                      }}
                     region = {mapRegion.region}>
 
             {(globalInfo.nomeLocal !== '')? 
@@ -212,6 +242,18 @@ function Mapa(){
             </MapView>
 
             {menu()}
+
+            <View style={ Styles.menuWrapper }>
+                
+                <Animated.View style={ [Styles.menu, {width: animatedWidth, height: animatedHeight, marginBottom: animatedMargin}] }>
+                    <TouchableOpacity style={{flexDirection: 'row', justifyContent: 'space-between', width:'100%'}}
+                    activeOpacity={0.8} onPress={ () => switchScreens(false) }>
+                        {btnText()}
+                    </TouchableOpacity>
+                </Animated.View>
+
+            </View>
+          
 
         </View>
     )

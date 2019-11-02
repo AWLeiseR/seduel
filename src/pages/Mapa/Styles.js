@@ -2,10 +2,10 @@ import {StyleSheet, Dimensions} from 'react-native'
 import { colors, fonts } from '../../utils/const'
 
 
-const menuWidth = Dimensions.get('window').width / 1.05
-const menuHeight = Dimensions.get('window').height / 12
+export const menuWidth = Dimensions.get('window').width / 1.05
+export const menuHeight = Dimensions.get('window').height / 12
 const btnMargin = Dimensions.get('window').width / 32
-const bottomMargin = Dimensions.get('window').height / 35
+export const bottomMargin = Dimensions.get('window').height / 35
 
 const Styles=StyleSheet.create({
 
@@ -25,14 +25,12 @@ const Styles=StyleSheet.create({
     menu:{
 
         backgroundColor: colors.def_blue,
-        height: menuHeight,
-        width: menuWidth,
         
         borderRadius: 50,
 
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        
         paddingHorizontal: 25,
 
     },
@@ -51,7 +49,7 @@ const Styles=StyleSheet.create({
         borderTopEndRadius: 10,
         borderTopStartRadius: 10,
 
-        marginBottom: -(menuHeight*0.5) - (menuHeight/1.5) - btnMargin,
+        marginBottom: bottomMargin*1.2,
 
         padding: Dimensions.get('window').width/30
 
@@ -68,6 +66,7 @@ const Styles=StyleSheet.create({
     },
 
     routeBtn:{
+        position: 'absolute',
         backgroundColor: colors.def_orange,
         borderRadius:50,
 
@@ -79,7 +78,8 @@ const Styles=StyleSheet.create({
 
         height: menuHeight/1.5,
         width: menuWidth/3.2,
-        marginBottom: btnMargin
+
+        bottom: bottomMargin*2.2
     },
 
     routeText:{
@@ -156,8 +156,8 @@ const Styles=StyleSheet.create({
 
     backBtn:{
 
-        height: menuHeight/1.5,
-        width: menuWidth/3.2,
+        // height: menuHeight/1.5,
+        // width: menuWidth/3.2,
 
         backgroundColor: colors.def_blue,
         borderRadius:50,

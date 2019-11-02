@@ -1,18 +1,18 @@
-/* COMPATIVEL APENAS COM HOOKS */
-
 import React, {useEffect} from 'react'
 import {BackHandler} from 'react-native'
 
-export default function backhandler(action){
+export default function mapBackhandler(action, aux, state){
 
-    useEffect(() => {
-        BackHandler.addEventListener("hardwareBackPress", () => {
+    BackHandler.addEventListener("hardwareBackPress", () => {
+
+        if(state == 1){
+            aux()
+            return true
+        }else{
             action()
             return true
-        });
-    
-        return () => {
-          BackHandler.removeEventListener("hardwareBackPress", () => action());
-        };
-      }, []);
+        }
+        
+    })
+        
 }
