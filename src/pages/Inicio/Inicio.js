@@ -8,6 +8,7 @@ import { DateTime } from 'luxon'
 import Mapa from '../Mapa/Mapa'
 import Noticias from'../Noticias/Noticias'
 import Programacao from '../Programacao/Programacao'
+import Sobre from '../Sobre/Sobre'
 import Countdown from '../../Components/Timer/Timer'
 
 class Inicio extends React.Component{
@@ -34,6 +35,9 @@ class Inicio extends React.Component{
                         <Text>Programação</Text>
                     </TouchableOpacity>
                 </View>
+                <TouchableOpacity style={Styles.buttonSobre} onPress={()=>this.props.navigation.navigate('Sobre')}>
+                    <Text>Sobre</Text>
+                </TouchableOpacity>
             </View>
         )
     }
@@ -51,6 +55,9 @@ const AppNavigator = createStackNavigator({
     },
     Programacao:{
         screen: Programacao,
+    },
+    Sobre:{
+        screen: Sobre,
     }
   },
   {

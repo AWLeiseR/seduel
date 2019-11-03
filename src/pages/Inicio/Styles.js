@@ -20,7 +20,7 @@ const Styles=StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         alignSelf:'center',
-        marginBottom:valueHeight/20
+        marginBottom:valueHeight/35
     },
     menuBar:{
         
@@ -31,6 +31,13 @@ const Styles=StyleSheet.create({
         alignItems:'center',
         width:valueWidth/4,
         height:valueHeight/10
+    },
+    buttonSobre:{
+        alignSelf:'center',
+        alignItems:'center',
+        width:valueWidth/10,
+        height:valueHeight/30,
+        marginTop:valueHeight/15
     }
 })
 
