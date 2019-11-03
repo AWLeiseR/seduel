@@ -4,6 +4,7 @@
 
 # Xcode
 #
+ios
 build/
 *.pbxuser
 !default.pbxuser
@@ -23,13 +24,13 @@ DerivedData
 
 # Android/IntelliJ
 #
+android
 build/
 .idea
 .gradle
 local.properties
 *.iml
-android
-ios
+
 # node.js
 #
 node_modules/

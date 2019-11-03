@@ -13,6 +13,12 @@ export const images={
     icon:require('../assets/images/icon.png')
 }
 
+export const fonts={
+    bold: 'Muli-Bold',
+    semibold: 'Muli-SemiBold',
+    light: 'Muli-Light',
+    regular: 'Muli-Regular'
+}
 export const prog=[
     {palestras:[
             {horario:'16h00', palestra:[{titulo:'Credenciamento', local:'Cine Teatro Ouro Verde',link:''}]},
