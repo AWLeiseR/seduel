@@ -5,7 +5,7 @@ import {View,
         Dimensions,
         FlatList,
     TouchableOpacity,
-    ScrollView} from 'react-native'
+    Modal} from 'react-native'
 import {colors,images,prog} from '../../utils/const'
 import Palestra from '../../Components/Palestra/Palestra'
 import Styles from './Styles'
@@ -52,6 +52,9 @@ class Programacao extends React.Component{
 
         return(
             <View>
+                <Modal isVisible={false}>
+
+                </Modal>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Image source={ images.detail} style={{ width: width/3 , height: width/3}} />
                     <Text style={{ marginLeft: width/30, fontSize: width/10 }} >Programação</Text>
