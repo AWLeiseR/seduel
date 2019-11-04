@@ -6,13 +6,26 @@ import {View,
 import Styles from './Styles'
 
 class Palestra extends React.Component{
-
+    constructor(){
+        super()
+        this.state={
+            url=this.props.link
+        }
+    }
+    verificaUrl(){
+        if(this.state.url==''){
+            return null
+        }else{
+            return this.state.url
+        }
+    }
     render(){
         return(
-            <TouchableOpacity onPress={()=> Linking.openURL(url=this.props.link)} style={Styles.back}>
+            <TouchableOpacity onPress={()=> Linking.openURL(this.state.url)} style={Styles.back}>
                 <Text style={Styles.title}>{this.props.title}</Text>
                 <View style={Styles.line}></View>
                 <Text>{this.props.local}</Text>
+                <Text>Local</Text>
             </TouchableOpacity>
         )
     }

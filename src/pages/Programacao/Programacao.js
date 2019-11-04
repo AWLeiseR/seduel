@@ -5,10 +5,13 @@ import {View,
         Dimensions,
         FlatList,
     TouchableOpacity,
-    Modal} from 'react-native'
-import {colors,images,prog} from '../../utils/const'
+    Modal,
+    ScrollView} from 'react-native'
+import {colors,images,prog,minicurso} from '../../utils/const'
 import Palestra from '../../Components/Palestra/Palestra'
 import Styles from './Styles'
+import Minicurso from '../../Components/Minicurso/Minicurso'
+
 
 
 
@@ -20,7 +23,8 @@ class Programacao extends React.Component{
             color2:colors.def_white,
             color3:colors.def_white,
             color4:colors.def_white,
-            dia:0
+            dia:0,
+            modal:true
         }
     }
 
@@ -49,12 +53,24 @@ class Programacao extends React.Component{
     
         }
     }
+
+    changeBool(value){
+        return !value
+    }
+
     render(){
 
         return(
             <View>
-                <Modal isVisible={false}>
-
+                <Modal visible={this.state.modal} >
+                    <ScrollView>
+                        {minicurso.map(item=><Minicurso titulo={item.titulo} 
+                            autores={item.autor} 
+                            descricao={item.objetivo}/>)}
+                    </ScrollView>
+                    <TouchableOpacity onPress={()=>this.setState({modal:this.changeBool(this.state.modal)}) }>
+                        <Text>Escoder Minicursos</Text>
+                    </TouchableOpacity>
                 </Modal>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Image source={ images.detail} style={ Styles.headerImage } />
