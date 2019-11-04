@@ -23,6 +23,7 @@ class Programacao extends React.Component{
             dia:0
         }
     }
+
     resetColor(num){
         this.setState({color1:colors.def_white,
             color2:colors.def_white,
@@ -30,6 +31,7 @@ class Programacao extends React.Component{
             color4:colors.def_white})
             this.changeColor(num)
     }
+
     changeColor(num){
         switch(num){
             case '1':
@@ -48,41 +50,49 @@ class Programacao extends React.Component{
         }
     }
     render(){
-        const width = Dimensions.get('window').width
 
         return(
             <View>
+
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                    <Image source={ images.detail} style={{ width: width/3 , height: width/3}} />
-                    <Text style={{ marginLeft: width/30, fontSize: width/10 }} >Programação</Text>
+                    <Image source={ images.detail} style={ Styles.headerImage } />
+                    <Text style={ Styles.screenTitle } >Programação</Text>
                 </View>
+
                 <View style={Styles.buttons}>
                     <TouchableOpacity onPress={()=> this.resetColor('1')} style={[Styles.button,{borderColor:this.state.color1}]}>
-                        <Text style={Styles.text}>11/11</Text>
+                        <Text style={Styles.btnText}>11/11</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>this.resetColor('2')} style={[Styles.button,{borderColor:this.state.color2}]}>
-                        <Text style={Styles.text}>12/11</Text>
+                        <Text style={Styles.btnText}>12/11</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>this.resetColor('3')} style={[Styles.button,{borderColor:this.state.color3}]}>
-                        <Text style={Styles.text}>13/11</Text>
+                        <Text style={Styles.btnText}>13/11</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>this.resetColor('4')} style={[Styles.button,{borderColor:this.state.color4}]}>
-                        <Text style={Styles.text}>14/11</Text>
+                        <Text style={Styles.btnText}>14/11</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={Styles.container}>
-                    <FlatList data={prog[this.state.dia].palestras} renderItem={({item})=>
+                
+                <FlatList
+                    style={ Styles.flatList }
+                    data={prog[this.state.dia].palestras}
+                    renderItem={({item})=>
                         <View >
-                            <View style={{flexDirection:'row'}}>
-                                <Text>{item.horario}</Text>
+                            
+                            <View style={ Styles.timeHeader }>
+                                <Text style={ Styles.timeText }>{item.horario}</Text>
                                 <View style={Styles.line}></View>
                             </View>
                             
-                            <FlatList data={item.palestra} renderItem={({item})=> <Palestra title={item.titulo} link={item.link}  local={item.local}/>}
-                                keyExtractor={item => item.titulo}/>
+                            {item.palestra.map(item => {
+                                return <Palestra title={item.titulo} link={item.link}  local={item.local}/>
+                            })}
+                    
                         </View>
-                    }keyExtractor={item => item.horario}/>            
-                </View>
+                    }
+                    keyExtractor={item => item.horario}/>            
+                
             </View>
         )
     }
