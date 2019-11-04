@@ -13,11 +13,14 @@ const Styles=StyleSheet.create({
         height:valueHeight/5,
         alignSelf:'center',
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
+        padding:valueWidth/20,
+        marginVertical:valueHeight/85
 
     },
     title:{
-        fontWeight:'bold'
+        fontWeight:'bold',
+        textAlign:'center'
     },
     line:{
         width:valueWidth/1.5,
