@@ -24,7 +24,7 @@ class Programacao extends React.Component{
             color3:colors.def_white,
             color4:colors.def_white,
             dia:0,
-            modal:true
+            modal:false
         }
     }
 
@@ -57,19 +57,24 @@ class Programacao extends React.Component{
     changeBool(value){
         return !value
     }
-
+    showModal = (value) => {
+        this.setState({modal:value})
+    }
     render(){
 
         return(
             <View>
-                <Modal visible={this.state.modal} >
-                    <ScrollView>
-                        {minicurso.map(item=><Minicurso titulo={item.titulo} 
+                <Modal visible={this.state.modal} onRequestClose={()=>this.setState({modal:this.changeBool(this.state.modal)})} >
+                    <FlatList data={minicurso}
+                        renderItem={({item})=>
+                        <Minicurso titulo={item.titulo} 
                             autores={item.autor} 
-                            descricao={item.objetivo}/>)}
-                    </ScrollView>
-                    <TouchableOpacity onPress={()=>this.setState({modal:this.changeBool(this.state.modal)}) }>
-                        <Text>Escoder Minicursos</Text>
+                            descricao={item.objetivo}
+                            local={item.local}/>}
+                            keyExtractor={item=>item.titulo}
+                            />
+                    <TouchableOpacity style={Styles.buttonModal}onPress={()=>this.setState({modal:this.changeBool(this.state.modal)}) }>
+                        <Text style={Styles.btnText}>Esconder Minicursos</Text>
                     </TouchableOpacity>
                 </Modal>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -104,7 +109,7 @@ class Programacao extends React.Component{
                             </View>
                             
                             {item.palestra.map(item => {
-                                return <Palestra title={item.titulo} link={item.link}  local={item.local}/>
+                                return <Palestra title={item.titulo} link={item.link}  callback={this.showModal} local={item.local}/>
                             })}
                     
                         </View>

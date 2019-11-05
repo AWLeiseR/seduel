@@ -16,7 +16,12 @@ class Minicurso extends React.Component{
 
     showObject(){
         if(this.state.visible){
-            return(<Text>{this.props.descricao}</Text>)
+            return(
+            <View>
+                <Text style={{paddingLeft:5,marginBottom:5}}>Objetivo:</Text>
+                <Text style={Styles.descricao}>{this.props.descricao}</Text>
+            </View>
+            )
         }
     }
 
@@ -34,14 +39,18 @@ class Minicurso extends React.Component{
         
         return(
             <View style={Styles.back}>
-                <Text>{this.props.titulo}</Text>
+                <Text style={Styles.titulo}>{this.props.titulo}</Text>
+                <Text >Autores:</Text>
                 <FlatList data={this.props.autores}
-                    renderItem={({item})=><Text>{item}</Text>}/>
+                    renderItem={({item})=><Text style={{marginBottom:4}}>{item}</Text>} 
+                    keyExtractor={item=>item}/>
+                     <Text style={{textAlign:'center',marginBottom:4}}>{this.props.local}</Text>
                     {this.showObject()}
-                    <TouchableOpacity onPress={()=>this.setState({visible:this.changeBool(this.state.visible),text:this.changeText()})}style={Styles.button}>
+                    <TouchableOpacity onPress={()=>this.setState({visible:this.changeBool(this.state.visible),text:this.changeText()})}
+                        style={Styles.button}>
                         <Text style={{color:'white'}}>{this.state.text}</Text>
                     </TouchableOpacity>
-                    <Text>{this.props.local}</Text>
+                   
             </View>
         )
     }

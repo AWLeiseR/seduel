@@ -8,24 +8,23 @@ import Styles from './Styles'
 class Palestra extends React.Component{
     constructor(){
         super()
-        this.state={
-            url=this.props.link
-        }
+       
     }
-    verificaUrl(){
-        if(this.state.url==''){
-            return null
+    thereIsModal(){
+        if(this.props.link){
+            return(<Text style={Styles.info}>Toque aqui para mais informações</Text>)
         }else{
-            return this.state.url
+            return null
         }
     }
     render(){
         return(
-            <TouchableOpacity onPress={()=> Linking.openURL(this.state.url)} style={Styles.back}>
+            <TouchableOpacity onPress={()=> this.props.callback(this.props.link)} style={Styles.back}>
                 <Text style={Styles.title}>{this.props.title}</Text>
                 <View style={Styles.line}></View>
-                <Text>{this.props.local}</Text>
-                <Text>Local</Text>
+                <Text style={Styles.nomeLocal}>{this.props.local}</Text>
+                <Text style={Styles.local}>Local</Text>
+                {this.thereIsModal()}
             </TouchableOpacity>
         )
     }

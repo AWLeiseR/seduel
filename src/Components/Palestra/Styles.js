@@ -20,12 +20,25 @@ const Styles=StyleSheet.create({
     },
     title:{
         fontWeight:'bold',
-        textAlign:'center'
+        textAlign:'center',
+        fontSize:valueHeight/50
     },
     line:{
         width:valueWidth/1.5,
         height:1,
         backgroundColor:colors.def_blue,
+        margin:valueHeight/120
+    },
+    nomeLocal:{
+        marginBottom:valueHeight/170,
+        fontSize:valueHeight/50
+    },
+    local:{
+        fontSize:valueHeight/65
+    },
+    info:{
+        fontWeight:'bold',
+        fontSize:valueHeight/70
     }
 })
 
