@@ -65,6 +65,7 @@ class Programacao extends React.Component{
         return(
             <View>
                 <Modal visible={this.state.modal} onRequestClose={()=>this.setState({modal:this.changeBool(this.state.modal)})} >
+                    <View style={{height: 10}}/>
                     <FlatList data={minicurso}
                         renderItem={({item})=>
                         <Minicurso titulo={item.titulo} 

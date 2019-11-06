@@ -21,7 +21,7 @@ const Styles=StyleSheet.create({
     title:{
         fontWeight:'bold',
         textAlign:'center',
-        fontSize:valueHeight/50
+        fontSize:Dimensions.get('screen').fontScale*13
     },
     line:{
         width:valueWidth/1.5,
@@ -31,7 +31,7 @@ const Styles=StyleSheet.create({
     },
     nomeLocal:{
         marginBottom:valueHeight/170,
-        fontSize:valueHeight/50
+        fontSize:Dimensions.get('screen').fontScale*14
     },
     local:{
         fontSize:valueHeight/65
