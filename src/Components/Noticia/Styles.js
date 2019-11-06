@@ -20,7 +20,7 @@ const Styles = StyleSheet.create({
     },
     Text: {
         fontSize: 18,
-        textAlign: 'center'
+        textAlign: 'justify'
     },
     newsCardContent: {
         padding: 5,
