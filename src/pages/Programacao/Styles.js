@@ -52,7 +52,8 @@ const Styles=StyleSheet.create({
     btnText:{
         fontFamily: fonts.bold,
         fontSize: Dimensions.get('window').width / 27,
-        color:colors.def_white
+        color:colors.def_white,
+        textAlign:'center'
     },
 
     timeHeader:{
@@ -72,8 +73,17 @@ const Styles=StyleSheet.create({
         width:valueWidth/1.2,
         height: 1,
         backgroundColor:colors.def_blue,
-        marginLeft: 5
+        marginHorizontal:1
     },
+    buttonModal:{
+        width:valueWidth/1.5,
+        height: valueHeight/25,
+        backgroundColor:colors.def_orange,
+        borderRadius:valueWidth/50,
+        alignSelf:'center',
+        margin:valueHeight/50,
+        justifyContent:'center'
+    }
 
 })
 
