@@ -15,6 +15,7 @@ import Noticias from'../Noticias/Noticias'
 import Programacao from '../Programacao/Programacao'
 import Sobre from '../Sobre/Sobre'
 import Countdown from '../../Components/Timer/Timer'
+import Noticia from '../../Components/Noticia/Noticia'
 
 class Inicio extends React.Component{
 
@@ -24,7 +25,6 @@ class Inicio extends React.Component{
                 <StatusBar backgroundColor={colors.def_white} barStyle='dark-content'/>
                 <Image source={images.banner3x} style={Styles.banner} resizeMode='stretch'/>
                 <View style={Styles.timer}>
-                    <Text style={{ fontSize: Dimensions.get('screen').fontScale*13.5 }}>faltam apenas</Text>
                     <Countdown end={DateTime.fromISO('2019-11-11T16:00:00-03:00')} />
                 </View>
 
@@ -68,6 +68,9 @@ const AppNavigator = createStackNavigator({
     },
     Sobre:{
         screen: Sobre,
+    },
+    'Notícia Inteira':{
+        screen: Noticia
     }
   },
   {
