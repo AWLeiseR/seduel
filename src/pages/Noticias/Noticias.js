@@ -4,7 +4,8 @@ import {View,
         ActivityIndicator,
         FlatList,
         Image,
-        Dimensions} from 'react-native'
+        Dimensions,
+        TouchableWithoutFeedback} from 'react-native'
 import axios from 'axios'
 import Styles from './Styles'
 
@@ -39,24 +40,36 @@ class Noticias extends React.Component{
 
     drawCard(noticia){
         return(
-            <View style={Styles.newsCard}>
+            <TouchableWithoutFeedback key={ noticia._id } onPress={() => { this.props.navigation.navigate('Notícia Inteira', {image : true, titulo: noticia.title, texto: noticia.body, imagem: noticia.url} ) }}>
+                <View style={Styles.newsCard}>
                     <Image style={Styles.newsCardImage} source={{uri: noticia.url }}></Image>
                     <View style={Styles.newsCardContent}> 
-                        <Text style={Styles.newsCardTitle}>{ noticia.title }</Text>
-                        <Text style={Styles.newsCardDesc}>{ noticia.body }</Text>
-                    </View> 
-            </View>
+                            <Text style={Styles.newsCardTitle}>{noticia.title.length <= 100?
+                            noticia.title:
+                            `${noticia.title.substring(0,65)}...`}</Text>
+                            <Text style={Styles.newsCardDesc}>{noticia.body.length <= 200?
+                            noticia.body:
+                            `${noticia.body.substring(0,65)}...`}</Text>
+                        </View> 
+                </View>
+            </TouchableWithoutFeedback>
         )
     }
 
     drawCardNoPicture(noticia){
         return(
-            <View style={Styles.newsCardNoPicture}>
-                    <View style={Styles.newsCardContent}> 
-                        <Text style={Styles.newsCardTitle}>{ noticia.title }</Text>
-                        <Text style={Styles.newsCardDesc}>{ noticia.body }</Text>
-                    </View> 
-            </View>
+            <TouchableWithoutFeedback key={ noticia._id } onPress={() => { this.props.navigation.navigate('Notícia Inteira', {image : false, titulo: noticia.title, texto: noticia.body} ) }}>
+                <View style={Styles.newsCardNoPicture}>
+                        <View style={Styles.newsCardContent}> 
+                            <Text style={Styles.newsCardTitle}>{noticia.title.length <= 100?
+                            noticia.title:
+                            `${noticia.title.substring(0,65)}...`}</Text>
+                            <Text style={Styles.newsCardDesc}>{noticia.body.length <= 200?
+                            noticia.body:
+                            `${noticia.body.substring(0,65)}...`}</Text>
+                        </View> 
+                </View>
+            </TouchableWithoutFeedback>
         )
     }
 

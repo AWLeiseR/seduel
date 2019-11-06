@@ -30,7 +30,8 @@ const Styles = StyleSheet.create({
         borderTopLeftRadius: 4,
         borderTopRightRadius: 4,
         marginTop: 10,
-        borderBottomWidth: 0.5
+        borderBottomWidth: 0.5,
+        resizeMode: 'contain'
     },
     newsCardContent: {
         padding: 5,
