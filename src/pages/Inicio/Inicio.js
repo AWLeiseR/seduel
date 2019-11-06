@@ -32,15 +32,15 @@ class Inicio extends React.Component{
                 <View style={Styles.menuBar}>
                     <TouchableOpacity style={Styles.button} onPress={()=>this.props.navigation.navigate('Noticias')}>
                         <Image source={images.noticiasIcon}/>
-                        <Text>Noticias</Text>
+                        <Text style={ Styles.buttonText }>Noticias</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={Styles.button} onPress={()=>this.props.navigation.navigate('Mapa', this.props.navigation.navigate)}>
                         <Image source={images.mapIcon}/>
-                        <Text>Mapa</Text>
+                        <Text style={ Styles.buttonText }>Mapa</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={Styles.button} onPress={()=>this.props.navigation.navigate('Programacao')}>
                         <Image source={images.programacaoIcon}/>
-                        <Text>Programação</Text>
+                        <Text style={ Styles.buttonText }>Programação</Text>
                     </TouchableOpacity>
                 </View>
 

@@ -38,6 +38,11 @@ const Styles=StyleSheet.create({
         height:valueHeight/10
     },
 
+    buttonText:{
+        fontFamily: fonts.bold,
+        fontSize: Dimensions.get('window').width / 30,
+    },
+
     buttonSobre:{
 
         height: 40,
