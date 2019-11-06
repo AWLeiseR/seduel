@@ -10,7 +10,12 @@ export const images={
     banner2x:require('../assets/images/banner2x.png'),
     banner3x:require('../assets/images/banner3x.png'),
     detail:require('../assets/images/detail.png'),
-    icon:require('../assets/images/icon.png')
+    mapIcon:require('../assets/icons/mapa/mapa.png'),
+    programacaoIcon:require('../assets/icons/programacao/programacao.png'),
+    noticiasIcon:require('../assets/icons/noticias/noticias.png'),
+    siteIcon:require('../assets/icons/site/site.png'),
+    facebookIcon:require('../assets/icons/facebook/facebook.png'),
+    instagramIcon:require('../assets/icons/instagram/instagram.png')
 }
 
 export const fonts={
@@ -19,6 +24,8 @@ export const fonts={
     light: 'Muli-Light',
     regular: 'Muli-Regular'
 }
+
+
 export const prog=[
     {palestras:[
             {horario:'16h00', palestra:[{titulo:'Credenciamento', local:'Cine Teatro Ouro Verde',link:''}]},
