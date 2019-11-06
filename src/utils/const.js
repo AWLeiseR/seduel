@@ -39,7 +39,7 @@ export const prog=[
     {palestras:[
             {horario:'09h00',
                 palestra:[
-                    {titulo:'Lançamento de livros Palestra: Diferenciação pedagógica na educação infantil: o caminho para a inclusão. Profa Dra Ana Artur - Universidade de Évora - Portugal',
+                    {titulo:'Lançamento de livros e Palestra: Diferenciação pedagógica na educação infantil: o caminho para a inclusão. Profa Dra Ana Artur - Universidade de Évora - Portugal',
                     local:'Anfiteatro do CESA Atividade Cultural',
                     link:false}
                 ]
@@ -60,7 +60,9 @@ export const prog=[
     {palestras:[
             {horario:'08h30', 
                 palestra:[
-                    {titulo:'Rodas de Conversa Inscrições',local:'CECA',link:false}
+                    {titulo:'Rodas de Conversa Inscrições',
+                    local:'CECA',
+                    link:false}
                 ]
             },
             {horario:'14h00', 
@@ -100,9 +102,9 @@ export const prog=[
             },
             {horario:'14h00', 
                 palestra:[
-                    {titulo:'Atividade Cultural Rodas de Conversa Inscrições',
+                    {titulo:'Atividade Cultural e Rodas de Conversa',
                     local:'CECA', 
-                    link:true}
+                    link:false}
                 ]
             },
            {horario:'19h15', 

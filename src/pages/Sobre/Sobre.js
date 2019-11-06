@@ -99,7 +99,7 @@ class Sobre extends React.Component{
                     
                     <Text style={ Styles.contato }>Contato</Text>
                     <View style={Styles.sites}>
-                        <TouchableOpacity style={ Styles.icons }>
+                        <TouchableOpacity style={ Styles.icons } onPress={() => Linking.openURL('https://www.instagram.com/sedu.2019/')}>
                             <Image source={images.instagramIcon} style={ Styles.icons }/>
                             <Text style={ Styles.iconsText }>Instagram</Text>
                         </TouchableOpacity>
