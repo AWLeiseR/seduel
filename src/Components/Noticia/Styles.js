@@ -8,7 +8,8 @@ const Styles = StyleSheet.create({
     Image:{
         width: Dimensions.get('screen').width/1.05,
         height: Dimensions.get('screen').height/3.2,
-        marginTop: Dimensions.get('screen').height/80
+        marginTop: Dimensions.get('screen').height/80,
+        resizeMode: 'contain'
     },
     container: {
         alignItems: 'center',
