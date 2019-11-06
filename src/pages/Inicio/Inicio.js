@@ -27,23 +27,27 @@ class Inicio extends React.Component{
                 <View style={Styles.timer}>
                     <Countdown end={DateTime.fromISO('2019-11-11T16:00:00-03:00')} />
                 </View>
+
+
                 <View style={Styles.menuBar}>
                     <TouchableOpacity style={Styles.button} onPress={()=>this.props.navigation.navigate('Noticias')}>
-                        <Image source={images.icon}/>
+                        <Image source={images.noticiasIcon}/>
                         <Text>Noticias</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={Styles.button} onPress={()=>this.props.navigation.navigate('Mapa', this.props.navigation.navigate)}>
-                        <Image source={images.icon}/>
+                        <Image source={images.mapIcon}/>
                         <Text>Mapa</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={Styles.button} onPress={()=>this.props.navigation.navigate('Programacao')}>
-                        <Image source={images.icon}/>
+                        <Image source={images.programacaoIcon}/>
                         <Text>Programação</Text>
                     </TouchableOpacity>
                 </View>
-                <TouchableOpacity style={Styles.buttonSobre} onPress={()=>this.props.navigation.navigate('Sobre')}>
-                    <Text>Sobre</Text>
+
+                <TouchableOpacity style={ Styles.buttonSobre } onPress={()=>this.props.navigation.navigate('Sobre')}>
+                    <Text style={ Styles.aboutText }>Sobre o evento</Text>
                 </TouchableOpacity>
+                
             </View>
         )
     }

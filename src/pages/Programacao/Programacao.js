@@ -5,10 +5,13 @@ import {View,
         Dimensions,
         FlatList,
     TouchableOpacity,
+    Modal,
     ScrollView} from 'react-native'
-import {colors,images,prog} from '../../utils/const'
+import {colors,images,prog,minicurso} from '../../utils/const'
 import Palestra from '../../Components/Palestra/Palestra'
 import Styles from './Styles'
+import Minicurso from '../../Components/Minicurso/Minicurso'
+
 
 
 
@@ -20,7 +23,8 @@ class Programacao extends React.Component{
             color2:colors.def_white,
             color3:colors.def_white,
             color4:colors.def_white,
-            dia:0
+            dia:0,
+            modal:false
         }
     }
 
@@ -49,11 +53,30 @@ class Programacao extends React.Component{
     
         }
     }
+
+    changeBool(value){
+        return !value
+    }
+    showModal = (value) => {
+        this.setState({modal:value})
+    }
     render(){
 
         return(
             <View>
-
+                <Modal visible={this.state.modal} onRequestClose={()=>this.setState({modal:this.changeBool(this.state.modal)})} >
+                    <FlatList data={minicurso}
+                        renderItem={({item})=>
+                        <Minicurso titulo={item.titulo} 
+                            autores={item.autor} 
+                            descricao={item.objetivo}
+                            local={item.local}/>}
+                            keyExtractor={item=>item.titulo}
+                            />
+                    <TouchableOpacity style={Styles.buttonModal}onPress={()=>this.setState({modal:this.changeBool(this.state.modal)}) }>
+                        <Text style={Styles.btnText}>Esconder Minicursos</Text>
+                    </TouchableOpacity>
+                </Modal>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Image source={ images.detail} style={ Styles.headerImage } />
                     <Text style={ Styles.screenTitle } >Programação</Text>
@@ -86,7 +109,7 @@ class Programacao extends React.Component{
                             </View>
                             
                             {item.palestra.map(item => {
-                                return <Palestra title={item.titulo} link={item.link}  local={item.local}/>
+                                return <Palestra title={item.titulo} link={item.link}  callback={this.showModal} local={item.local}/>
                             })}
                     
                         </View>
