@@ -200,7 +200,7 @@ function Mapa( props ){
         return (menuState == menuStatus.SEARCH)? 
                 <Text style={ [Styles.txtButton, {flex:1, textAlign:'center'}] }>Voltar</Text>:
                 <>
-                <Text style={ Styles.txtButton }>Pesquisar locais</Text>
+                <Text style={ Styles.txtButton }>Principais locais</Text>
                 <Text style={ Styles.txtButton }>></Text>
                 </>
     }
