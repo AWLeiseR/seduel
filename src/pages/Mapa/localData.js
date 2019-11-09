@@ -29,7 +29,7 @@ export default DATA = [
     {
       "index": 3,
       "nomeLocal": "Shopping Catuai",
-      "descricao": "A Philco equipô tudo restaronte com produto de alto qualidado. Batederra platetára philco. Ela tem cessêntos Uáts potênça. Onzo velocidada, más tchurbo três batêdoro, dois tigela ele tem um movimento planetáro incrivo",
+      "descricao": "",
       latlng:{
         latitude:-23.341762, 
         longitude: -51.184787
@@ -105,6 +105,78 @@ export default DATA = [
       latlng:{
         latitude:-23.325605,
         longitude:-51.195700
+      }
+    },
+    {
+      "index": 12,
+      "nomeLocal": "Hotel Londri Star",
+      "descricao": "Telefone: (43) 3026-3000. Diária: R$ 120 individual; R$ 185 duplo; R$ 230 triplo. Com desconto os preços abaixam para R$ 110, R$ 170, e R$ 205, respectivamente. Possui café da manhã, internet e estacionamento.",
+      latlng:{
+        latitude:-23.312036, 
+        longitude: -51.147079
+      }
+    },
+    {
+      "index": 13,
+      "nomeLocal": "Comfort Suites Londrina",
+      "descricao": "Telefone: (43) 2103-9100. Diária: R$ 228 individual; R$ 278 duplo + 3% de imposto; R$ 328  triplo + 3% de imposto. Café da manhã, estacionamento e internet inclusos.",
+      latlng:{
+        latitude:-23.328966, 
+        longitude: -51.177650
+      }
+    },
+    {
+      "index": 14,
+      "nomeLocal": "Villalba Hoteis Londrina-PR",
+      "descricao": "Telefone: (43) 3373-9200. Diária: R$ 149 individual; R$ 169 duplo. Com desconto os preços abaixam para R$ 140 e R$ 160, respectivamente. Café da manhã, internet e estacionamento inclusos.",
+      latlng:{
+        latitude:-23.311450, 
+        longitude: -51.156967
+      }
+    },
+    {
+      "index": 15,
+      "nomeLocal": "Hotel Harbor Inn Londrina",
+      "descricao": "Telefone: (43) 3377-4455",
+      latlng:{
+        latitude:-23.341762, 
+        longitude: -51.184787
+      }
+    },
+    {
+      "index": 16,
+      "nomeLocal": "Pousada Vale do Rubi",
+      "descricao": "Telefone: (43) 99912-7964. Diária: R$ 79 individual; R$ 110 duplo; R$ 149 triplo; Quarto compartilhado R$ 55 por pessoa. Com desconto o preço do quarto invidiual abaixa para R$ 75. Café da manhã, estacionamento e internet inclusos.",
+      latlng:{
+        latitude:-23.286006, 
+        longitude: -51.152169
+      }
+    },
+    {
+      "index": 17,
+      "nomeLocal": "Hostel e Pousada Pé Vermelho",
+      "descricao": "Telefone: (43) 99921-3200. Diária: R$ 70 individual; R$ 109 duplo; Suíte com cama casal R$ 80 por pessoa, R$ 119 duas pessoas; Desconto de 10% para todos os quartos. Com desconto os preços abaixam para R$ 110, R$ 170, e R$ 205, respectivamente. Café da manhã, estacionamento e internet inclusos.",
+      latlng:{
+        latitude:-23.310794, 
+        longitude: -51.158129
+      }
+    },
+    {
+      "index": 18,
+      "nomeLocal": "Hotel Thomasi",
+      "descricao": "Telefone: (43) 3315-0400",
+      latlng:{
+        latitude: -23.310920, 
+        longitude: -51.161642
+      }
+    },
+    {
+      "index": 19,
+      "nomeLocal": "Casa de Hóspedes",
+      "descricao": "Telefone: (43) 99983-3371",
+      latlng:{
+        latitude:-23.325414, 
+        longitude: -51.201827
       }
     }
   ]

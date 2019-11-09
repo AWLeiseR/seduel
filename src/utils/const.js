@@ -15,7 +15,16 @@ export const images={
     noticiasIcon:require('../assets/icons/noticias/noticias.png'),
     siteIcon:require('../assets/icons/site/site.png'),
     facebookIcon:require('../assets/icons/facebook/facebook.png'),
-    instagramIcon:require('../assets/icons/instagram/instagram.png')
+    instagramIcon:require('../assets/icons/instagram/instagram.png'),
+    organizacao:require('../assets/images/organizacao.png'),
+
+    palestrantes:{
+        mariaisabel:require('../assets/images/mariaIsabel.jpeg'),
+        gaudencio:require('../assets/images/gaudencio.jpeg'),
+        assuncao:require('../assets/images/assuncao.jpeg'),
+        anaArtur:require('../assets/images/anaArtur.jpeg')
+    }
+
 }
 
 export const fonts={
@@ -31,7 +40,7 @@ export const prog=[
             {horario:'16h00', palestra:[{titulo:'Credenciamento', 
             local:'Cine Teatro Ouro Verde',
             link:false}]},
-            {horario:'19h15', palestra:[{titulo:'Solenidade de Abertura com Apresentação da Orquestra Sinfônica da Uel: OSUEL Conferência de abertura. Prof. Dr. Gaudêncio Frigotto - UERJ',
+            {horario:'19h15', palestra:[{titulo:'Solenidade de Abertura com Apresentação da Orquestra Sinfônica da Uel: OSUEL. Palestra: "A CONTRAREFORMA DO ENSINO MÉDIO: NEGAÇÃO A EDUCAÇÃO BÁSICA E INTERDIÇÃO DO FUTURO A JUVENTUDE" - Prof. Dr. Gaudêncio Frigotto da UFF',
             local:'Cine Teatro Ouro Verde',
             link:false}]}
         ] 

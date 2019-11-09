@@ -55,6 +55,19 @@ const Styles=StyleSheet.create({
 
     },
 
+    infoContainerNoDescription:{
+        height: Dimensions.get('window').width/3 + (menuHeight / 2),
+        width: menuWidth,
+        backgroundColor: colors.def_white,
+        borderTopEndRadius: 10,
+        borderTopStartRadius: 10,
+
+        marginBottom: bottomMargin*1.2,
+
+        padding: Dimensions.get('window').width/30
+
+    },
+
     infoTitle: {
         fontFamily: fonts.bold,
         fontSize: Dimensions.get('window').width/18,
@@ -63,6 +76,10 @@ const Styles=StyleSheet.create({
     infoSubtitle:{
         fontFamily: fonts.regular,
         fontSize: Dimensions.get('window').width/26
+    },
+
+    scrollView:{
+        height: (Dimensions.get('window').width/1.8 + (menuHeight / 2)) / 2.5
     },
 
     routeBtn:{
