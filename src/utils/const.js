@@ -39,10 +39,10 @@ export const prog=[
     {palestras:[
             {horario:'16h00', palestra:[{titulo:'Credenciamento', 
             local:'Cine Teatro Ouro Verde',
-            link:false}]},
-            {horario:'19h15', palestra:[{titulo:'Solenidade de Abertura com Apresentação da Orquestra Sinfônica da Uel: OSUEL. Palestra: "A CONTRAREFORMA DO ENSINO MÉDIO: NEGAÇÃO A EDUCAÇÃO BÁSICA E INTERDIÇÃO DO FUTURO A JUVENTUDE" - Prof. Dr. Gaudêncio Frigotto da UFF',
+            link:''}]},
+            {horario:'19h15', palestra:[{titulo:'Solenidade de Abertura com Apresentação da Orquestra Sinfônica da Uel: OSUEL Conferência de abertura. Prof. Dr. Gaudêncio Frigotto - UERJ',
             local:'Cine Teatro Ouro Verde',
-            link:false}]}
+            link:''}]}
         ] 
     },
     {palestras:[
@@ -50,52 +50,50 @@ export const prog=[
                 palestra:[
                     {titulo:'Lançamento de livros e Palestra: Diferenciação pedagógica na educação infantil: o caminho para a inclusão. Profa Dra Ana Artur - Universidade de Évora - Portugal',
                     local:'Anfiteatro do CESA Atividade Cultural',
-                    link:false}
+                    link:''}
                 ]
             },
             {horario:'14h00', 
                 palestra:[
                     {titulo:'Apresentações de trabalhos e comunicações orais',
                     local:'CECA',
-                    link:false}
+                    link:''}
                 ]
             },
            {horario:'19h30',
                 palestra:[{titulo:'Atividade Cultural Lançamento de livros Palestra: Aprendizagem e pedagogia - (dês) continuidade entre a educação infantil e o ensino fundamental - Profa Dra - Assunção Folque Universidade de Évora - Portugal',
                 local:'Anfiteatro do CESA',
-                link:false}]}  
+                link:''}]}  
         ]
     },
     {palestras:[
             {horario:'08h30', 
                 palestra:[
-                    {titulo:'Rodas de Conversa Inscrições',
-                    local:'CECA',
-                    link:false}
+                    {titulo:'Rodas de Conversa Inscrições',local:'CECA',link:''}
                 ]
             },
             {horario:'14h00', 
                 palestra:[
                     {titulo:'I Encontro de Egressos do Programa de Pós-graduação em Educação - PPEdu - UEL',
                     local:'CECA',
-                    link:false},
+                    link:''},
                     {titulo:'Minicursos Inscrições',
                     local:'CECA',
-                    link:true}
+                    link:'minicurso'}
                 ]
             },
             {horario:'18h00', 
                 palestra:[
                     {titulo:'Atividade cultural ',
                     local:'CECA',
-                    link:false}
+                    link:''}
                 ]
             },
             {horario:'19h30', 
                 palestra:[
                     {titulo:'Apresentações de trabalhos e comunicações orais e trabalhos audiovisuais',
                     local:'CECA',
-                    link:false}
+                    link:''}
                 ]
             }
         ]
@@ -106,21 +104,21 @@ export const prog=[
                 palestra:[
                     {titulo:'Apresentações de trabalhos e comunicações orais',
                     local:'CECA',
-                    link:false}
+                    link:''}
                 ]
             },
             {horario:'14h00', 
                 palestra:[
                     {titulo:'Atividade Cultural e Rodas de Conversa',
                     local:'CECA', 
-                    link:false}
+                    link:'roda'}
                 ]
             },
            {horario:'19h15', 
                 palestra:[
                     {titulo:'Atividade cultural: Grupo Vocal Canto da Lira Palestra de Encerramento: Educação Étnico Racial - Profa Dra ​Maria ​Isabel Mena Garcia  - UNAD - Colômbia',
                     local:'Anfiteatro Cyro Grossi - CCB',
-                    link:false}
+                    link:''}
                 ]
             }
         ]
@@ -250,4 +248,127 @@ export const minicurso=[
     ],
     objetivo:'Experiência estética e fenomenológica por meio do desenho e a interação do corpo de quem participa da oficina. Pretende-se que quem entre em contato com a oficina interaja com o próprio corpo e o corpo próximo de si. Os participantes irão vivenciar uma etapa que o encenador teatral italiano Eugênio Barba nomeia de treinamento pré-expressivo porque trata de um processo de preparação para então chegar no processo criativo. Então, será levado ao espaço exercícios que tem como objetivo estimular a cognição e a propricepção, para então, a projecao/expressão por meio da corporeidade. Atividades que envolvem o desenho e referências de artistas como Heather Hansen e Caroline Denervaud, que utilizam da corporalidade como base de seus trabalhos, também estarão presentes na oficina, na busca de compreensão das possíveis visualidades e linguagens pelo qual um corpo pode se expressar',
     local:'Local: Laboratório de Artes Cênicas - 13/11/19 18h 30min às 22h 30min'}
+]
+
+export const roda=[
+    {titulo:'Biblioteca escolar e a formação de leitores em Londrina: pesquisa e extensão',
+        autor:[
+            'Rovilson José da Silva (COORDENADOR)',
+            'Greice Ferreira da Silva',
+            'Márcia Batista Oliveira ',
+            'Sueli Bortolin'
+        ],
+        objetivo:'Discutir acerca do uso da biblioteca escolar no âmbito da formação de leitores na escola pública de ensino fundamental I, em Londrina. - Evidenciar a trajetória histórica do projeto de leitura da rede municipal de ensino de Londrina, o Palavras Andantes, um dos focos de estudos do grupo de pesquisa e extensão. - Apresentar o andamento da pesquisa e extensão que estão em desenvolvimento na rede municipal de educação, por meio do projeto de leitura Palavras Andantes Propõe-se para Roda de Conversa trazer à discussão pesquisa e extensão, em desenvolvimento, acerca da formação de leitores, mediação da leitura e a contribuição da biblioteca escolar nesse processo, por meio do: - Grupo de Pesquisa: Leitura, Biblioteca Escolar e Mediação Pedagógica; - Projeto de Pesquisa: Mediação Pedagógica Da Leitura Nas Bibliotecas Escolares Da Rede Municipal De Ensino De Londrina; - Projeto de extensão: Formação Do Mediador De Leitura Da Rede Pública De Educação.',
+        local:'Local: Sala 685 - 13/11/19 8h 30min'
+    },
+    {titulo:'Semiformação e Educação no contexto da sociedade danificada',
+        autor:[
+            'Marta Regina Furlan de Oliveira (COORDENADOR)',
+            'Anilde Tombolato Tavares da Silva',
+            'Cândida Alayde de Carvalho Bittencourt',
+            'Zuleika Aparecida Claro Piassa'
+        ],objetivo:'O tema tem o objetivo principal de compreender acerca do processo semiformativo docente na educação no contexto da sociedade danificada à luz dos fundamentos da teoria crítica da sociedade. A discussão se justifica, considerando que em nosso tempo atual a educação, a formação cultural e a sociedade se veem cercadas, por um lado, pela lógica da produção capitalista, e por outro lado, pela suposta crise dos fundamentos referenciais no que tange a formação humana dos profissionais educacionais. os sintomas do enfraquecimento da formação cultural se fazem observar por toda parte, até mesmo no território das pessoas aparentemente providas de certa intelectualidade. nesse sentido, por meio de pequenos textos, vídeos e outros recursos, desenvolveremos uma reflexão e debate sobre a semiformação e educação e, também acerca do papel docente à luz dos fundamentos teóricos críticos da sociedade, principalmente,',
+        local:'Local: Sala 686 - 13/11/19 8h 30min '},
+    {titulo:'Currículo, formação e atuação do pedagogo: pressupostos e implicações no campo educacional',
+    autor:[
+        'Nathália Martins (COORDENADOR)',
+        'Adriana Regina de Jesus',
+        'Adrielen Amancio da Silva',
+        'Anna Carolina Pinheiro Prado',
+        'Carolaine Criele de Souza',
+        'Claudiane Olimpio da Silva',
+        'Danibia Silva Ferreira',
+        'Daniella caroline Ferreira',
+        'Desire Blum Menezes Torres',
+        'Emerson Alves Da Silva',
+        'Jaqueline Santos de Paula',
+        'Joao Batista de Souza Junior',
+        'Lauriete da Silva Bernardes',
+        'Mariane Scariante de Oliveira',
+        'Martinho Gilson Cardoso',
+        'Sergio Inácio Torres'
+    ],objetivo:'As recentes tendências na pesquisa educacional sobre currículo, formação e o papel do pedagogo têm dado destaque aos estudos sobre as imagens, significados e crenças que os discentes têm em relação a sua formação inicial. apesar da diversidade teórica e conceitual, compreender as percepções dos estudantes do curso de pedagogia da universidade estadual de londrina, possuem sobre tal aspecto é o foco deste estudo. isto posto, elencamos os seguintes objetivos:compreender as representações dos estudantes do curso de pedagogia no que se refere aos sentidos de currículo, formação e atuação profissional, a fim de refletir como está sendo a organização e o processo da formação continuada do futuro pedagogo. como objetivo específico pretendemos:analisar o currículo e o projeto político pedagógico do curso de pedagogia tendo como parâmetro identificar os pressupostos teóricos e metodológicos que norteiam a formação do referido profissional; conhecer as percepções dos discentes do curso de pedagogia em relação ao seu processo de formação e suas implicações na atuação profissional, a fim de entender a relação entre o currículo instituinte. ',
+    local:'Local: Sala 689 - 13/11/19 - 8h 30min'},
+    {titulo:'I Encontro de egressos do Programa de Pós Graduação em Educação da Universidade Estadual de Londrina',
+    autor:[
+        'Adriana Regina de Jesus (COORDENADOR)',
+        'Sandra Regina de Oliveira',
+        'Eliane Cleide Czernisz',
+        'Edméia Maria de Lima',
+        'Anieli Sandaniel',
+        'Ingrid Selegrin Campos',
+        'Lorena Mariane Santos Rissi',
+        'Lorena Polyane Primo',
+        'Jucenir da Silva Serafim',
+        'Maria Luzia Silva Mariano',
+        'Valdir Pimenta',
+        'Elisabete C. Pereira Eches',
+        'Adrielen Amâncio da Silva',
+        'Ana Carolina Carmo Leonor'
+    ],
+    objetivo:'Possibilitar a discussão, interação e disseminação das diferentes pesquisas realizadas pelos alunos egressos do Programa de Pós Graduação em Educação da Universidade Estadual de Londrina. Este encontro possibilitará interação, troca de experiência e disseminação de informações científicas entre os professores docentes, pósgraduandos e graduandos, assim como profissionais da área de educação. Isto posto, este momento é de suma importância, pois o programa poderá avaliar o processo formativo, a identificação do perfil profissional dos egressos, sua inserção no mundo do trabalho e à aplicabilidade dos conhecimentos acadêmicos à atuação profissional. ',
+    local:'Local: Sala 691 - 13/11/19 8h 30min'},
+    {titulo:'DidaTic: tecnologias, práticas didáticas e aprendizagem',
+    autor:[
+        'Diene Eire de Méllo (COORDENADOR)',
+        'Edilaine Vagula',
+        'Dirce Moraes '
+    ],objetivo:'A proposta para a roda de conversa consiste na discussão sobre as tecnologias digitais nas práticas educativas e seu papel enquanto instrumento mediador do processo formativo. Na atualidade este é um tema complexo e de grande repercussão nos espaços educativos. Esta roda de conversa se dará com o envolvimento de três projetos: Tecnologias digitais, didática e aprendizagem As apropriações e práticas dos estudantes com os artefatos digitais na vida cotidiana e acadêmica: implicações para os processos de aprendizagem Os artefatos digitais como subsidiários mediadores das práticas educativas e dos processos cognitivos dos estudantes dos anos iniciais do ensino fundamental',
+    local:'Local: Sala 693 - 14/11/19 14h'},
+    {titulo:'Formação para a docência universitária: experiências da Unicentro, UEPG e UEL ',
+    autor:[
+        'Juliana Bayeux Dascal (COORDENADOR)',
+        'Wanda Terezinha Pacheco dos Santos',
+        'Graciete Tozetto Góes'
+    ],objetivo:'Nessa roda de conversa, as professoras irão discutir os trabalhos já realizados sobre a formação continuada na Unicentro (Programa Entredocentes), Uepg (Programa DES - Docência no Ensino Superior) e Uel (GEPE – Grupo de Estudos de Prática em Ensino), tendo em vista que nessas instituições a preocupação com os aspectos que envolvem o saber docente e a prática pedagógica já vem sendo trabalhados em programas de formação institucionalizados. A troca de experiências será o principal foco de discussão a fim de que possamos aproveitar aspectos positivos e negativos já vivenciados e com isso aprimorar os programas existentes e até mesmo levantar possibilidades para que esses espaços passem a existir em outras IES.',
+    local:'Local: Sala 685 - 14/11/19 14h'},
+    {titulo:'Metodologias Ativas e Ensino Híbrido: em busca de diálogos metodológicos',
+    autor:[
+        'Eliza Adriana Sheuer Nantes (COORDENADOR)',
+        'Samira Fayez Kfouri',
+        'Adriano Rosa Alves ',
+        'Maria Gorett Freire Vitiello'
+    ],
+    objetivo:'O desenvolvimento das Tecnologias Digitais de Informação e Comunicação (TDICs) impulsionaram as alterações nas práticas sociais humanas, culminando com informações que foram alocadas no ciberespaço, com isso, o saber passa a ser mais desterritorializado (LÉVY, 2000). Tal contexto, possibilita outros caminhos metodológicos para a práxis docente. Em tal cenário, contextualiza-se o presente diálogo que objetiva ser um espaço de troca de experiências sobre as possibilidades de exploração das metodologias ativas, via ensino híbrido. Este grupo de pesquisadores já experienciou práticas pedagógicas com iniciação científica na modalidade da Educação à Distância; inserção de alunos bolsistas via ensino híbrido, orientação de PIBID e aula no stricto sensu com atividades híbridas. Em todas experiências, a metodologia de pesquisa adotada foi a qualitativa, com abordagem descritiva e interventiva. Os resultados foram similares, visto que indicaram a necessidade de os atores envolvidos dominarem os letramentos digitais, bem como repensarem os papeis discursivos e os possíveis espaços/tempo nos quais pode ocorrer a aprendizagem. ',
+    local:'Local: Sala 686 - 14/11/19 14h'},
+    {titulo:'Paulo Freire e o trabalho em espaços de educação não-formais',
+    autor:[
+        'Rafael Bianchi Silva (COORDENADOR)',
+        'Claudia de Godoi Ferreira de Almeida'
+    ],
+    objetivo:'A concepção dessa roda de conversa nasce das atividades realizadas no projeto de pesquisa intitulado “A Psicologia na Política de Assistência Social: Novas Leituras na Atuação entre os Sujeitos e Coletivos” que tem como um de seus objetivos debater as contribuições de Paulo Freire para o trabalho social realizado no âmbito da referida política que possui como finalidade a promoção da autonomia, potencialidades e empoderamento. A partir disso, realizamos uma problematização da relação entre desenvolvimento e formação humana tendo por operadores da análise elementos presentes na concepção de educação em Paulo Freire como por exemplo, a noção de ação dialógica e a ideia de ser mais. Nesse sentido, esta proposta visa estabelecer um espaço de trocas tanto com pesquisadores que realizam suas pesquisas a partir do referencial proposto como também com aqueles que desenvolvem suas pesquisas no campo da educação não-formal.',
+    local:'Local: Sala 689 - 14/11/19 14h '},
+    {titulo:'Adaptação Curricular no Ensino Superior',
+    autor:[
+        'Karen Ribeiro (COORDENADOR)',
+        'Ana Paula Pereira de Moraes dos Santos', 
+        'Fernanda Pereira de Souza de Mello',
+        'Jessica Leticia Gomes Paulena',
+        'Nathalia Pereira dos Santos',
+        'Renata Porto Lopes',
+    ],
+    objetivo:'Discutir a adaptação curricular para estudantes com deficiência no ensino superior. Explicação sobre o tema: a adaptação curricular para estudantes com deficiência na educação básica é amplamente discutida. O mesmo não ocorre no ensino superior. Por isso, nesta roda de conversa serão apresentadas situações fictícias para iniciar o debate e a reflexão sobre o tema, identificar os recursos e estratégias possíveis para garantir a permanência do estudante com deficiência nas universidades.',
+    local:'Local: Sala 690 - 14/11/19 14h'},
+    {titulo:'Programa residência no curso de Pedagogia da Universidade Estadual de Londrina: alguns desafios e possibilidades ',
+    autor:[
+        'Adriana Regina de Jesus Santos (COORDENADOR)',
+        'Tatiana de Freitas Silva',
+        'Maria Vitoria Braga Sudário',
+        'Leticia Alves',
+        'Heloisa Helena Aparecida Chaves Duarte Bezerra', 
+        'Yasmin Christie Ueno Fernandes',
+        'Vanessa Dantas Vieira',
+        'Marina Cerqueria Silva',
+        'Monica da Silva Andre',
+        'Karina da Silva Reis',
+       'Priscila Aparecida de Oliveira'
+    ],
+    objetivo:'O Programa Residência Pedagógica, se traduz em uma necessidade de estreitar de forma mais sistematizada a integração entre Universidade e Escola Básica. O Programa residência pretende estreitar também, os vínculos entre os residentes dos cursos Licenciatura com as instituições estaduais e municipais da região de ensino básico, de modo a possibilitar ao futuro professor vivências em diferentes cenários. Para esta roda de conversa, delimitamos o programa residência do Curso de Pedagogia da Universidade Estadual de Londrina. As razões que justificam a adesão do programa no referido curso se relacionam à ampliação do debate acadêmico-científico em torno de um tema atual e emergente que é a formação de docentes, bem como à possibilidade de qualificação do processo de formação docente para o ensino. Isto posto, os objetivos deste estudo são: a) proporcionar por meio do programa residência a articulação de ações entre o Curso de Pedagogia da Universidade Estadual de Londrina, da Escola Municipal José Garcia Vilar e do Centro de Educação Infantil da Universidade Estadual de Londrina no que se refere ao processo de ensino e aprendizagem tendo em vista contribuir com a formação do sujeito aprendente; b) proporcionar aos alunos do curso de Pedagogia refletir sobre sua ação docente tendo como parâmetro a Teoria Histórico-Cultural; c) organizar encontros formativos de estudo e oficinas pedagógicas para os alunos do curso de pedagogia, professores da escola municipal e do centro de educação infantil. ',
+    local:'Local: Sala 691 - 14/11/19 14h'},
+    {titulo:'Medicalização e infância',
+    autor:[
+        'Gabriel Rocha Bandeira'
+    ],
+    objetivo:'A proposta é discutir e problematizar as noções de infância produzidas no contexto escolar a partir de diagnósticos de psicopatologia. Tal discussão resulta de um trabalho de pesquisa realizado no departamento de ciências sociais do CLCH da UEL de 2017 a 2018 sob a orientação e coordenação da Profa. Dra. Maria Carolina de Araujo Antonio.',
+    local:'Local: Sala 692 - 14/11/19 14h'},
 ]
