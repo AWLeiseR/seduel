@@ -112,8 +112,8 @@ export default DATA = [
       "nomeLocal": "Hotel Londri Star",
       "descricao": "Telefone: (43) 3026-3000. Diária: R$ 120 individual; R$ 185 duplo; R$ 230 triplo. Com desconto os preços abaixam para R$ 110, R$ 170, e R$ 205, respectivamente. Possui café da manhã, internet e estacionamento.",
       latlng:{
-        latitude:-23.312036, 
-        longitude: -51.147079
+        latitude: -23.325752,
+        longitude: -51.189927
       }
     },
     {
@@ -121,8 +121,8 @@ export default DATA = [
       "nomeLocal": "Comfort Suites Londrina",
       "descricao": "Telefone: (43) 2103-9100. Diária: R$ 228 individual; R$ 278 duplo + 3% de imposto; R$ 328  triplo + 3% de imposto. Café da manhã, estacionamento e internet inclusos.",
       latlng:{
-        latitude:-23.328966, 
-        longitude: -51.177650
+        latitude: -23.340383,
+        longitude: -51.183509
       }
     },
     {
@@ -130,8 +130,8 @@ export default DATA = [
       "nomeLocal": "Villalba Hoteis Londrina-PR",
       "descricao": "Telefone: (43) 3373-9200. Diária: R$ 149 individual; R$ 169 duplo. Com desconto os preços abaixam para R$ 140 e R$ 160, respectivamente. Café da manhã, internet e estacionamento inclusos.",
       latlng:{
-        latitude:-23.311450, 
-        longitude: -51.156967
+        latitude: -23.340948,
+        longitude: -51.182977
       }
     },
     {
@@ -139,8 +139,8 @@ export default DATA = [
       "nomeLocal": "Hotel Harbor Inn Londrina",
       "descricao": "Telefone: (43) 3377-4455",
       latlng:{
-        latitude:-23.341762, 
-        longitude: -51.184787
+        latitude: -23.325545,
+        longitude: -51.178654
       }
     },
     {
@@ -148,8 +148,8 @@ export default DATA = [
       "nomeLocal": "Pousada Vale do Rubi",
       "descricao": "Telefone: (43) 99912-7964. Diária: R$ 79 individual; R$ 110 duplo; R$ 149 triplo; Quarto compartilhado R$ 55 por pessoa. Com desconto o preço do quarto invidiual abaixa para R$ 75. Café da manhã, estacionamento e internet inclusos.",
       latlng:{
-        latitude:-23.286006, 
-        longitude: -51.152169
+        latitude: -23.312287,
+        longitude: -51.185607
       }
     },
     {
@@ -157,8 +157,8 @@ export default DATA = [
       "nomeLocal": "Hostel e Pousada Pé Vermelho",
       "descricao": "Telefone: (43) 99921-3200. Diária: R$ 70 individual; R$ 109 duplo; Suíte com cama casal R$ 80 por pessoa, R$ 119 duas pessoas; Desconto de 10% para todos os quartos. Com desconto os preços abaixam para R$ 110, R$ 170, e R$ 205, respectivamente. Café da manhã, estacionamento e internet inclusos.",
       latlng:{
-        latitude:-23.310794, 
-        longitude: -51.158129
+        latitude: -23.301408,
+        longitude: -51.204019
       }
     },
     {
@@ -166,17 +166,8 @@ export default DATA = [
       "nomeLocal": "Hotel Thomasi",
       "descricao": "Telefone: (43) 3315-0400",
       latlng:{
-        latitude: -23.310920, 
-        longitude: -51.161642
-      }
-    },
-    {
-      "index": 19,
-      "nomeLocal": "Casa de Hóspedes",
-      "descricao": "Telefone: (43) 99983-3371",
-      latlng:{
-        latitude:-23.325414, 
-        longitude: -51.201827
+        latitude: -23.300842,
+        longitude: -51.184600
       }
     }
   ]
