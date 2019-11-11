@@ -18,7 +18,7 @@ const Palestrantes = [
     {
         id: 2,
         nome: 'Gaudêncio Frigotto',
-        universidade: 'UERJ',
+        universidade: 'Universidade do Estado do Rio de Janeiro',
         link: 'http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4780705Y6',
         image: images.palestrantes.gaudencio
     },

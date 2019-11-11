@@ -76,16 +76,10 @@ class Sobre extends React.Component{
                     <Text style={ Styles.title } >Sobre o evento</Text>
                 </View>
 
-                <ScrollView>
                     <Text style={ Styles.about }>A Semana de Educação é um evento de natureza científica que tem como áreas de Educação e Pedagogia. A sua organização surgiu no passado, em conferências, grupos de trabalho, minicursos, apresentação de comunicações de trabalhos científicos e oficinas.</Text>
 
-                    <View>
-                        <Text style={ Styles.titlePalestrante }>Organização</Text>
-                        <Image style={{ width: '90%', height: 80, alignSelf: 'center'}} source={images.organizacao} resizeMode='contain'/>
-                    </View>
-
-                    <View style={{ marginVertical: 10 }}>
-                        <Text style={ Styles.titlePalestrante }>Palestrantes</Text>
+                    <View style={{ marginVertical: 20 }}>
+                        <Text style={ Styles.titlePalestrante }>Palestrantes - Deslize para ver mais</Text>
                         <ViewPager style={ Styles.palestrante } initialPage={0} ref={this.viewPager}>
                             {Palestrantes.map((person) => {
                                 return(
@@ -100,8 +94,21 @@ class Sobre extends React.Component{
                             })}
                         </ViewPager>
                     </View>
+
+                    <View>
+                        <Text style={ Styles.titlePalestrante }>Organização</Text>
+                        <Image style={{ width: '90%', height: 80, alignSelf: 'center'}} source={images.organizacao} resizeMode='contain'/>
+                    </View>
+
+                    <View>
+                        <Text style={ Styles.titlePalestrante }>Patrocínio</Text>
+                        <TouchableOpacity onPress={() => Linking.openURL('https://sapiens-psi.com.br/')}>
+                            <Image style={{ width: '50%', height: 80, alignSelf: 'center',}} source={images.logoSapiens}
+                                    resizeMode='contain'/>
+                        </TouchableOpacity>
+                    </View>
                     
-                    <Text style={ Styles.contato }>Contato</Text>
+                    <Text style={ Styles.contato }>Contato e Links Úteis</Text>
                     <View style={Styles.sites}>
                         <TouchableOpacity style={ Styles.icons } onPress={() => Linking.openURL('https://www.instagram.com/sedu.2019/')}>
                             <Image source={images.instagramIcon} style={ Styles.icons }/>
@@ -116,7 +123,21 @@ class Sobre extends React.Component{
                             <Text style={ Styles.iconsText }>Facebook</Text>
                         </TouchableOpacity>                    
                     </View>
-                </ScrollView>
+                    <View style={[Styles.sites, {marginTop: 10}]}>
+                        <TouchableOpacity style={ Styles.icons } onPress={() => Linking.openURL('http://www.uel.br/pos/mestredu/')}>
+                            <Image source={images.siteIcon} style={ Styles.icons }/>
+                            <Text style={ Styles.iconsText }>Site do PPDU</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={ Styles.icons } onPress={() => Linking.openURL('http://www.uel.br/ceca/pedagogia/')}>
+                            <Image source={images.siteIcon} style={ Styles.icons }/>
+                            <Text style={ Styles.iconsText }>Site do</Text>
+                            <Text style={ Styles.iconsText }>Departamento</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={ Styles.icons } onPress={() => Linking.openURL('http://www.uel.br/revistas/uel/index.php/educanalise')}>
+                            <Image source={images.siteIcon} style={ Styles.icons }/>
+                            <Text style={ Styles.iconsText }>Site da Revista</Text>
+                        </TouchableOpacity>
+                    </View>
 
             
             </ScrollView>

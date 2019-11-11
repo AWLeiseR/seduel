@@ -14,7 +14,7 @@ class Noticia extends React.Component {
             return(
                 <View style={Styles.container}>
                     <Image style={Styles.Image} source={{ uri: info.imagem }}></Image>
-                    <Text style={{fontSize: 20, fontWeight: 'bold', marginTop: 10, textAlign: 'center'}}>{info.titulo}</Text>
+                    <Text style={ Styles.screenTitle }>{info.titulo}</Text>
                     <View style={{backgroundColor: '#000', width: Dimensions.get('screen').width/1.1, height: 1, marginVertical: 10}}/>
                     <ScrollView style={Styles.ScrollView}>
                         <Text style={Styles.Text}>{info.texto}</Text>
@@ -27,11 +27,13 @@ class Noticia extends React.Component {
                 <View style={Styles.container}>
                     <Text style={{fontSize: 23, fontWeight: 'bold', marginTop: 20, textAlign: 'center'}}>{info.titulo}</Text>
                     <View style={{backgroundColor: '#000', width: Dimensions.get('screen').width/1.1, height: 1, marginVertical: 20}}/>
-                    <ScrollView style={Styles.ScrollView} scrollEnabled>
-                        <View style={{height: Dimensions.get('screen').height}}>
-                            <Text style={Styles.Text}>{texto}</Text>
-                        </View>
-                    </ScrollView>
+                    <View style={Styles.body}>
+                        <ScrollView style={Styles.ScrollView} scrollEnabled>
+                            <View style={{height: Dimensions.get('screen').height}}>
+                                <Text style={Styles.Text}>{texto}</Text>
+                            </View>
+                        </ScrollView>
+                    </View>
                 </View>
             )
         }

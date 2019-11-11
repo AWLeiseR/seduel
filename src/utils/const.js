@@ -6,9 +6,7 @@ export const colors={
 }
 
 export const images={
-    banner1x:require('../assets/images/banner1x.png'),
-    banner2x:require('../assets/images/banner2x.png'),
-    banner3x:require('../assets/images/banner3x.png'),
+    banner:require('../assets/images/banner.png'),
     detail:require('../assets/images/detail.png'),
     mapIcon:require('../assets/icons/mapa/mapa.png'),
     programacaoIcon:require('../assets/icons/programacao/programacao.png'),
@@ -17,6 +15,8 @@ export const images={
     facebookIcon:require('../assets/icons/facebook/facebook.png'),
     instagramIcon:require('../assets/icons/instagram/instagram.png'),
     organizacao:require('../assets/images/organizacao.png'),
+    backgroundEnsalamento:require('../assets/images/backgroundEnsalamento.png'),
+    logoSapiens:require('../assets/images/logoSapiens.png'),
 
     palestrantes:{
         mariaisabel:require('../assets/images/mariaIsabel.jpeg'),

@@ -30,14 +30,15 @@ const Styles=StyleSheet.create({
 
     palestrante:{
         
-        width: valueWidth / 1.1,
-        height: valueHeight / 4,
+        width: valueWidth,
+        height: valueHeight / 4.8,
 
         alignSelf: 'center',
 
         flexDirection:'column',
         alignItems:'center',
-        padding: 5
+        padding: 5,
+        marginTop: 10
 
     },
 
@@ -46,7 +47,8 @@ const Styles=StyleSheet.create({
         fontFamily: fonts.bold,
         fontSize: valueWidth / 20,
         textAlign: 'center',
-        marginBottom: 10
+        marginBottom: 10,
+        marginTop: 10
 
     },
 
@@ -58,7 +60,7 @@ const Styles=StyleSheet.create({
     },
 
     icons:{
-        alignSelf: 'center'
+        alignSelf: 'center',
         
     },
 
@@ -83,6 +85,7 @@ const Styles=StyleSheet.create({
     iconsText:{
         fontFamily: fonts.bold,
         fontSize: valueWidth / 30,
+        textAlign: 'center'
     }
 
 })

@@ -2,8 +2,16 @@ import {
     StyleSheet,
     Dimensions,
 } from 'react-native'
+import {fonts} from '../../utils/const'
 
 const Styles = StyleSheet.create({
+
+    screenTitle:{
+
+        fontFamily: fonts.bold,
+        textAlign:'center',
+        fontSize:Dimensions.get('screen').fontScale*13
+    },
 
     Image:{
         width: Dimensions.get('screen').width/1.05,
@@ -15,13 +23,20 @@ const Styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: Dimensions.get('screen').width/30
     },
+
+    body: {
+
+        height: Dimensions.get('screen').height/1.2
+
+    },
+
     ScrollView: {
-        marginHorizontal: 20,
+        paddingHorizontal: 20,
         marginBottom: 2
     },
     Text: {
         fontSize: 18,
-        textAlign: 'justify'
+        textAlign: 'justify',
     },
     newsCardContent: {
         padding: 5,

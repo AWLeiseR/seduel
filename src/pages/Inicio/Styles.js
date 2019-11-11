@@ -8,7 +8,7 @@ const Styles=StyleSheet.create({
     
     banner:{
         width:valueWidth,
-        height:valueHeight/3*1.212121,
+        height:valueHeight/3*1.25,
         marginBottom:valueHeight/20
     },
 
