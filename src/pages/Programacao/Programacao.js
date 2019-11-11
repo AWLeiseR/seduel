@@ -26,7 +26,7 @@ class Programacao extends React.Component{
             color4:colors.def_white,
             dia:0,
             modal:false,
-            data:undefined
+            data:roda
         }
     }
 
@@ -75,7 +75,7 @@ class Programacao extends React.Component{
             <View>
                 <Modal visible={this.state.modal} onRequestClose={()=>this.setState({modal:this.changeBool(this.state.modal)})} >
                     <View style={{height: 10}}/>
-                    <FlatList data={minicurso}
+                    <FlatList data={this.state.data}
                         renderItem={({item})=>
                         <Minicurso titulo={item.titulo} 
                             autores={item.autor} 
@@ -114,7 +114,7 @@ class Programacao extends React.Component{
                                     <View style={Styles.line}></View>
                                 </View>
                                 {item.palestra.map(item => {
-                                    return <Palestra title={item.titulo} link={item.link}  callback={this.showModal} local={item.local}/>
+                                    return (<Palestra title={item.titulo} link={item.link}  callback={this.showModal} local={item.local}/>)
                                 })}
                             </View>}
                         keyExtractor={item => item.horario}/>

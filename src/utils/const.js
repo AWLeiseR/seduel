@@ -69,7 +69,7 @@ export const prog=[
     {palestras:[
             {horario:'08h30', 
                 palestra:[
-                    {titulo:'Rodas de Conversa Inscrições',local:'CECA',link:''}
+                    {titulo:'Rodas de Conversa',local:'CECA',link:''}
                 ]
             },
             {horario:'14h00', 
@@ -77,7 +77,7 @@ export const prog=[
                     {titulo:'I Encontro de Egressos do Programa de Pós-graduação em Educação - PPEdu - UEL',
                     local:'CECA',
                     link:''},
-                    {titulo:'Minicursos Inscrições',
+                    {titulo:'Minicursos',
                     local:'CECA',
                     link:'minicurso'}
                 ]
