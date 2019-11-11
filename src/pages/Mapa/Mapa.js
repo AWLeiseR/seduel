@@ -6,7 +6,8 @@ import {View,
         TextInput,
         FlatList,
         Linking,
-        Animated} from 'react-native'
+        Animated,
+        ScrollView} from 'react-native'
 
 import MapView, { PROVIDER_GOOGLE,
     Marker } from 'react-native-maps'
@@ -33,26 +34,57 @@ function InfoMenu({ userLocation }){
         Linking.openURL(URL)
     }
 
-    return(
-        <View style={ Styles.menuWrapper }>
+    if(globalInfo.descricao.length != 0){
 
-            <View style={ Styles.infoContainer }>
-                <Text style={{ fontFamily: 'Avenir Roman', color:'gray' }}>em destaque</Text>
-                <Text style={ Styles.infoTitle }>{globalInfo.nomeLocal}</Text>
-                <Text numberOfLines={4} style={ Styles.infoSubtitle }>{globalInfo.descricao}</Text>
-
-                <TouchableOpacity activeOpacity={0.8} style={ Styles.routeBtn } onPress={() => sendToGMaps()}>
-                    <Text style={ Styles.routeText }>Obter rota</Text>
-                    <Image source={require('../../assets/icons/routeIcon/routeIcon.png')}
-                            resizeMode='contain'
-                            style={ Styles.routeIcon }/>
-                </TouchableOpacity>
+        return(
+            <View style={ Styles.menuWrapper }>
+    
+                <View style={ Styles.infoContainer }>
+                    <Text style={{ fontFamily: 'Avenir Roman', color:'gray' }}>em destaque</Text>
+                    <Text style={ Styles.infoTitle }>{globalInfo.nomeLocal}</Text>
+    
+                    <View style={ Styles.scrollView }>
+                    <ScrollView >
+                        <Text style={ Styles.infoSubtitle }>{globalInfo.descricao}</Text>
+                    </ScrollView>
+                    </View>
+                    
+                    <TouchableOpacity activeOpacity={0.8} style={ Styles.routeBtn } onPress={() => sendToGMaps()}>
+                        <Text style={ Styles.routeText }>Obter rota</Text>
+                        <Image source={require('../../assets/icons/routeIcon/routeIcon.png')}
+                                resizeMode='contain'
+                                style={ Styles.routeIcon }/>
+                    </TouchableOpacity>
+                </View>
+    
             </View>
+        )
 
-            
+    }else{
 
-        </View>
-    )
+        return(
+            <View style={ Styles.menuWrapper }>
+    
+                <View style={ Styles.infoContainerNoDescription }>
+                    <Text style={{ fontFamily: 'Avenir Roman', color:'gray' }}>em destaque</Text>
+                    <Text style={ Styles.infoTitle }>{globalInfo.nomeLocal}</Text>
+                    
+                    <TouchableOpacity activeOpacity={0.8} style={ Styles.routeBtn } onPress={() => sendToGMaps()}>
+                        <Text style={ Styles.routeText }>Obter rota</Text>
+                        <Image source={require('../../assets/icons/routeIcon/routeIcon.png')}
+                                resizeMode='contain'
+                                style={ Styles.routeIcon }/>
+                    </TouchableOpacity>
+                </View>
+    
+            </View>
+        )
+
+
+
+    }
+
+    
 
 }
 

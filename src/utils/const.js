@@ -15,7 +15,16 @@ export const images={
     noticiasIcon:require('../assets/icons/noticias/noticias.png'),
     siteIcon:require('../assets/icons/site/site.png'),
     facebookIcon:require('../assets/icons/facebook/facebook.png'),
-    instagramIcon:require('../assets/icons/instagram/instagram.png')
+    instagramIcon:require('../assets/icons/instagram/instagram.png'),
+    organizacao:require('../assets/images/organizacao.png'),
+
+    palestrantes:{
+        mariaisabel:require('../assets/images/mariaIsabel.jpeg'),
+        gaudencio:require('../assets/images/gaudencio.jpeg'),
+        assuncao:require('../assets/images/assuncao.jpeg'),
+        anaArtur:require('../assets/images/anaArtur.jpeg')
+    }
+
 }
 
 export const fonts={

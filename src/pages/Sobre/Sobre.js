@@ -70,15 +70,19 @@ class Sobre extends React.Component{
     render(){
         const width = Dimensions.get('window').width
         return(
-            <View>
+            <ScrollView>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <Image source={ images.detail } style={{ width: width/3 , height: width/3}} />
                     <Text style={ Styles.title } >Sobre o evento</Text>
                 </View>
 
-
                 <ScrollView>
                     <Text style={ Styles.about }>A Semana de Educação é um evento de natureza científica que tem como áreas de Educação e Pedagogia. A sua organização surgiu no passado, em conferências, grupos de trabalho, minicursos, apresentação de comunicações de trabalhos científicos e oficinas.</Text>
+
+                    <View>
+                        <Text style={ Styles.titlePalestrante }>Organização</Text>
+                        <Image style={{ width: '90%', height: 80, alignSelf: 'center'}} source={images.organizacao} resizeMode='contain'/>
+                    </View>
 
                     <View style={{ marginVertical: 10 }}>
                         <Text style={ Styles.titlePalestrante }>Palestrantes</Text>
@@ -86,8 +90,8 @@ class Sobre extends React.Component{
                             {Palestrantes.map((person) => {
                                 return(
                                     <View key={person.id} >
-                                        <TouchableOpacity activeOpacity={1} onPress={() => Linking.openURL(person.link)} style={{ alignItems: 'center'}}>
-                                            <Image style={ Styles.photo } source={{uri: person.image}}/>
+                                        <TouchableOpacity activeOpacity={1} onPress={() => (person.link.length == 0)? null:Linking.openURL(person.link)} style={{ alignItems: 'center'}}>
+                                            <Image style={ Styles.photo } source={ person.image }/>
                                             <Text style={ Styles.nome }>{person.nome}</Text>
                                             <Text style={ Styles.universidade }>{person.universidade}</Text>
                                         </TouchableOpacity>
@@ -115,7 +119,7 @@ class Sobre extends React.Component{
                 </ScrollView>
 
             
-            </View>
+            </ScrollView>
         )
     }
 

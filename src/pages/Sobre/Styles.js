@@ -52,7 +52,8 @@ const Styles=StyleSheet.create({
 
     sites:{
         flexDirection:'row',
-        justifyContent:'space-around'
+        justifyContent:'space-around',
+        marginBottom: 10
        
     },
 
