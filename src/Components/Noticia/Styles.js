@@ -32,7 +32,11 @@ const Styles = StyleSheet.create({
 
     ScrollView: {
         paddingHorizontal: 20,
-        marginBottom: 2
+        marginBottom: Dimensions.get('screen').height/2.5
+    },
+    ScrollViewSemImagem: {
+        paddingHorizontal: 20,
+        marginBottom: Dimensions.get('screen').height/9
     },
     Text: {
         fontSize: 18,
