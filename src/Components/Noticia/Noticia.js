@@ -16,7 +16,7 @@ class Noticia extends React.Component {
                     <Image style={Styles.Image} source={{ uri: info.imagem }}></Image>
                     <Text style={ Styles.screenTitle }>{info.titulo}</Text>
                     <View style={{backgroundColor: '#000', width: Dimensions.get('screen').width/1.1, height: 1, marginVertical: 10}}/>
-                    <ScrollView style={Styles.ScrollViewSemImagem}>
+                    <ScrollView style={Styles.ScrollView}>
                         <Text style={Styles.Text}>{texto}</Text>
                     </ScrollView>
                 </View>
