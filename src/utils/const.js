@@ -40,7 +40,7 @@ export const prog=[
             {horario:'16h00', palestra:[{titulo:'Credenciamento', 
             local:'Cine Teatro Ouro Verde',
             link:''}]},
-            {horario:'19h15', palestra:[{titulo:'Solenidade de Abertura com Apresentação da Orquestra Sinfônica da Uel: OSUEL Conferência de abertura. Prof. Dr. Gaudêncio Frigotto - UERJ',
+            {horario:'19h15', palestra:[{titulo:'Solenidade de Abertura com Apresentação da Orquestra Sinfônica da Uel: OSUEL; Palestra: A contrareforma do ensino médio: negação a educação básica e interdição do futuro a juventude - Prof. Dr. Gaudêncio Frigotto - UERJ',
             local:'Cine Teatro Ouro Verde',
             link:''}]}
         ] 
@@ -69,7 +69,7 @@ export const prog=[
     {palestras:[
             {horario:'08h30', 
                 palestra:[
-                    {titulo:'Rodas de Conversa',local:'CECA',link:''}
+                    {titulo:'Rodas de Conversa',local:'CECA',link:'roda'}
                 ]
             },
             {horario:'14h00', 
