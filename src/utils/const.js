@@ -40,7 +40,7 @@ export const prog=[
             {horario:'16h00', palestra:[{titulo:'Credenciamento', 
             local:'Cine Teatro Ouro Verde',
             link:''}]},
-            {horario:'19h15', palestra:[{titulo:'Solenidade de Abertura com Apresentação da Orquestra Sinfônica da Uel: OSUEL; Palestra: A contrareforma do ensino médio: negação a educação básica e interdição do futuro a juventude - Prof. Dr. Gaudêncio Frigotto - UERJ',
+            {horario:'19h15', palestra:[{titulo:'Solenidade de Abertura com Apresentação da Orquestra Sinfônica da Uel: OSUEL; Palestra: A contrareforma do ensino médio: negação à educação básica e interdição do futuro à juventude - Prof. Dr. Gaudêncio Frigotto - UERJ',
             local:'Cine Teatro Ouro Verde',
             link:''}]}
         ] 
@@ -60,8 +60,22 @@ export const prog=[
                     link:''}
                 ]
             },
+            {horario:'17h00', 
+                palestra:[
+                    {titulo:'Apresentação musical Zabelê Trio',
+                    local:'Praça do CECA',
+                    link:''}
+                ]
+            },
+            {horario:'17h30', 
+                palestra:[
+                    {titulo:'Laboratório de Artes Cênicas - Apresentação artística com Lainer',
+                    local:'Praça do CECA',
+                    link:''}
+                ]
+            },
            {horario:'19h30',
-                palestra:[{titulo:'Atividade Cultural Lançamento de livros Palestra: Aprendizagem e pedagogia - (dês) continuidade entre a educação infantil e o ensino fundamental - Profa Dra - Assunção Folque Universidade de Évora - Portugal',
+                palestra:[{titulo:'Atividade Cultural Lançamento de livros Palestra: Aprendizagem e pedagogia - (des) continuidade entre a educação infantil e o ensino fundamental - Profa Dra - Assunção Folque Universidade de Évora - Portugal',
                 local:'Anfiteatro do CESA',
                 link:''}]}  
         ]
@@ -75,11 +89,18 @@ export const prog=[
             {horario:'14h00', 
                 palestra:[
                     {titulo:'I Encontro de Egressos do Programa de Pós-graduação em Educação - PPEdu - UEL',
-                    local:'CECA',
+                    local:'CECA - Sala 683',
                     link:''},
                     {titulo:'Minicursos',
                     local:'CECA',
                     link:'minicurso'}
+                ]
+            },
+            {horario:'17h00', 
+                palestra:[
+                    {titulo:'Laboratório de Artes Cênicas - Apresentação artística com Ariel Trippy',
+                    local:'CECA',
+                    link:''}
                 ]
             },
             {horario:'18h00', 
@@ -109,9 +130,16 @@ export const prog=[
             },
             {horario:'14h00', 
                 palestra:[
-                    {titulo:'Atividade Cultural e Rodas de Conversa',
+                    {titulo:'Rodas de Conversa',
                     local:'CECA', 
                     link:'roda'}
+                ]
+            },
+            {horario:'17h00', 
+                palestra:[
+                    {titulo:'Laboratório de Artes Cênicas do CECA - Apresentação artística com Gabriel',
+                    local:'CECA', 
+                    link:''}
                 ]
             },
            {horario:'19h15', 
@@ -289,25 +317,6 @@ export const roda=[
         'Sergio Inácio Torres'
     ],objetivo:'As recentes tendências na pesquisa educacional sobre currículo, formação e o papel do pedagogo têm dado destaque aos estudos sobre as imagens, significados e crenças que os discentes têm em relação a sua formação inicial. apesar da diversidade teórica e conceitual, compreender as percepções dos estudantes do curso de pedagogia da universidade estadual de londrina, possuem sobre tal aspecto é o foco deste estudo. isto posto, elencamos os seguintes objetivos:compreender as representações dos estudantes do curso de pedagogia no que se refere aos sentidos de currículo, formação e atuação profissional, a fim de refletir como está sendo a organização e o processo da formação continuada do futuro pedagogo. como objetivo específico pretendemos:analisar o currículo e o projeto político pedagógico do curso de pedagogia tendo como parâmetro identificar os pressupostos teóricos e metodológicos que norteiam a formação do referido profissional; conhecer as percepções dos discentes do curso de pedagogia em relação ao seu processo de formação e suas implicações na atuação profissional, a fim de entender a relação entre o currículo instituinte. ',
     local:'Local: Sala 689 - 13/11/19 - 8h 30min'},
-    {titulo:'I Encontro de egressos do Programa de Pós Graduação em Educação da Universidade Estadual de Londrina',
-    autor:[
-        'Adriana Regina de Jesus (COORDENADOR)',
-        'Sandra Regina de Oliveira',
-        'Eliane Cleide Czernisz',
-        'Edméia Maria de Lima',
-        'Anieli Sandaniel',
-        'Ingrid Selegrin Campos',
-        'Lorena Mariane Santos Rissi',
-        'Lorena Polyane Primo',
-        'Jucenir da Silva Serafim',
-        'Maria Luzia Silva Mariano',
-        'Valdir Pimenta',
-        'Elisabete C. Pereira Eches',
-        'Adrielen Amâncio da Silva',
-        'Ana Carolina Carmo Leonor'
-    ],
-    objetivo:'Possibilitar a discussão, interação e disseminação das diferentes pesquisas realizadas pelos alunos egressos do Programa de Pós Graduação em Educação da Universidade Estadual de Londrina. Este encontro possibilitará interação, troca de experiência e disseminação de informações científicas entre os professores docentes, pósgraduandos e graduandos, assim como profissionais da área de educação. Isto posto, este momento é de suma importância, pois o programa poderá avaliar o processo formativo, a identificação do perfil profissional dos egressos, sua inserção no mundo do trabalho e à aplicabilidade dos conhecimentos acadêmicos à atuação profissional. ',
-    local:'Local: Sala 691 - 13/11/19 8h 30min'},
     {titulo:'DidaTic: tecnologias, práticas didáticas e aprendizagem',
     autor:[
         'Diene Eire de Méllo (COORDENADOR)',

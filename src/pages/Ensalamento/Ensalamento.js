@@ -8,6 +8,7 @@ import {View,
 import Styles from './Styles'
 import PDFView from 'react-native-view-pdf'
 import {images, colors} from '../../utils/const'
+import PDF from './pdf'
 
 
 class Ensalamento extends React.Component {
@@ -34,11 +35,11 @@ class Ensalamento extends React.Component {
 
         switch(type){
             case 1:
-                return 'http://www.uel.br/eventos/semanadaeducacao/pages/arquivos/ensalamento_SEDU2019_dia12_LISTA%20GERAL_VESPERTINO.pdf'
+                return PDF.dia1
             case 2:
-                return 'http://www.uel.br/eventos/semanadaeducacao/pages/arquivos/ensalamento_SEDU2019_dia13LISTA%20GERAL_NOTURNO.pdf'
+                return PDF.dia2
             case 3:
-                return 'http://www.uel.br/eventos/semanadaeducacao/pages/arquivos/ensalamento_SEDU2019_dia14%20LISTA%20GERAL_MATUTINO.pdf'
+                return PDF.dia3
         }
 
     }
@@ -54,7 +55,7 @@ class Ensalamento extends React.Component {
                         fadeInDuration={250.0}
                         style={{ flex: 1 }}
                         resource={this.getResource(this.state.urlType)}
-                        resourceType={'url'}
+                        resourceType={'base64'}
                     />
 
                     <TouchableOpacity style={Styles.buttonModal}onPress={()=>this.setState({modal:false}) }>
